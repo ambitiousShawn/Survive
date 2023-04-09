@@ -1,0 +1,170 @@
+fileFormatVersion: 2
+guid: 97c52b102dcf5b640a8266fd2da2e2cb
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Birdbeak
+    100002: BirdHead
+    100004: BirdLLeg1
+    100006: BirdLLeg2
+    100008: BirdLLegDigit01
+    100010: BirdLLegDigit11
+    100012: BirdLLegPalm
+    100014: BirdLWing1
+    100016: BirdLWing2
+    100018: BirdLWingCollarbone
+    100020: BirdLWingPalm
+    100022: Birdneck
+    100024: BirdPelvis
+    100026: BirdRibcage
+    100028: BirdRLeg1
+    100030: BirdRLeg2
+    100032: BirdRLegDigit01
+    100034: BirdRLegDigit11
+    100036: BirdRLegPalm
+    100038: BirdRWing1
+    100040: BirdRWing2
+    100042: BirdRWingCollarbone
+    100044: BirdRWingPalm
+    100046: BirdSpine1
+    100048: BirdSpine2
+    100050: BirdTail1
+    100052: BirdTail2
+    100054: //RootNode
+    100056: Raven_LOD0
+    100058: Raven_LOD1
+    100060: root
+    100062: BirdLWingIKTarget
+    100064: BirdRWingIKTarget
+    400000: Birdbeak
+    400002: BirdHead
+    400004: BirdLLeg1
+    400006: BirdLLeg2
+    400008: BirdLLegDigit01
+    400010: BirdLLegDigit11
+    400012: BirdLLegPalm
+    400014: BirdLWing1
+    400016: BirdLWing2
+    400018: BirdLWingCollarbone
+    400020: BirdLWingPalm
+    400022: Birdneck
+    400024: BirdPelvis
+    400026: BirdRibcage
+    400028: BirdRLeg1
+    400030: BirdRLeg2
+    400032: BirdRLegDigit01
+    400034: BirdRLegDigit11
+    400036: BirdRLegPalm
+    400038: BirdRWing1
+    400040: BirdRWing2
+    400042: BirdRWingCollarbone
+    400044: BirdRWingPalm
+    400046: BirdSpine1
+    400048: BirdSpine2
+    400050: BirdTail1
+    400052: BirdTail2
+    400054: //RootNode
+    400056: Raven_LOD0
+    400058: Raven_LOD1
+    400060: root
+    400062: BirdLWingIKTarget
+    400064: BirdRWingIKTarget
+    4300000: Raven_LOD1
+    4300002: Raven_LOD0
+    9500000: //RootNode
+    13700000: Raven_LOD0
+    13700002: Raven_LOD1
+    20500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Raven
+    second: {fileID: 2100000, guid: 170b638f304125647b5d3093db81367a, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.099999994
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

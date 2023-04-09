@@ -1,0 +1,212 @@
+fileFormatVersion: 2
+guid: 086bd7ab30a3e4442afb56549e218fed
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Plane001
+    100004: rat
+    100006: rat_LOD0
+    100008: rat_LOD1
+    100010: ratHead
+    100012: ratLegLBack1
+    100014: ratLegLBack2
+    100016: ratLegLBack3
+    100018: ratLegLBackPalm
+    100020: ratLegLFront1
+    100022: ratLegLFront2
+    100024: ratLegLFrontPalm
+    100026: ratLegRBack1
+    100028: ratLegRBack2
+    100030: ratLegRBack3
+    100032: ratLegRBackPalm
+    100034: ratLegRFront1
+    100036: ratLegRFront2
+    100038: ratLegRFrontPalm
+    100040: ratLLegCollarbone
+    100042: ratLLegPlatform
+    100044: ratLLegPlatform 1
+    100046: ratNeck
+    100048: ratPelvis
+    100050: ratRibcage
+    100052: ratRLegCollarbone
+    100054: ratRLegPlatform
+    100056: ratRLegPlatform 1
+    100058: ratSpine1
+    100060: ratSpine2
+    100062: ratTail1
+    100064: ratTail2
+    100066: ratTail3
+    100068: ratTail4
+    100070: ratTail5
+    100072: root
+    400000: //RootNode
+    400002: Plane001
+    400004: rat
+    400006: rat_LOD0
+    400008: rat_LOD1
+    400010: ratHead
+    400012: ratLegLBack1
+    400014: ratLegLBack2
+    400016: ratLegLBack3
+    400018: ratLegLBackPalm
+    400020: ratLegLFront1
+    400022: ratLegLFront2
+    400024: ratLegLFrontPalm
+    400026: ratLegRBack1
+    400028: ratLegRBack2
+    400030: ratLegRBack3
+    400032: ratLegRBackPalm
+    400034: ratLegRFront1
+    400036: ratLegRFront2
+    400038: ratLegRFrontPalm
+    400040: ratLLegCollarbone
+    400042: ratLLegPlatform
+    400044: ratLLegPlatform 1
+    400046: ratNeck
+    400048: ratPelvis
+    400050: ratRibcage
+    400052: ratRLegCollarbone
+    400054: ratRLegPlatform
+    400056: ratRLegPlatform 1
+    400058: ratSpine1
+    400060: ratSpine2
+    400062: ratTail1
+    400064: ratTail2
+    400066: ratTail3
+    400068: ratTail4
+    400070: ratTail5
+    400072: root
+    2100000: rat_01
+    2300000: Plane001
+    3300000: Plane001
+    4300000: rat_LOD1
+    4300002: rat_LOD0
+    4300004: Plane001
+    7400000: walk
+    9500000: //RootNode
+    13700000: rat_LOD0
+    13700002: rat_LOD1
+    20500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rat_01
+    second: {fileID: 2100000, guid: 3e4498d22c206c44ebc2a5296f6d9c55, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      firstFrame: 35
+      lastFrame: 47
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

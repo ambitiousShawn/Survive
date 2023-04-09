@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     // 每秒回复值
     public float pickUpPerSecond = 0.05f;
 
-    private float damage = 2f;
+    public float damagePerSecond = 1f;
     UGUI_MainUIPanel panel;
 
     // 高度，在此之上产生摔落伤害
@@ -37,8 +37,10 @@ public class Player : MonoBehaviour
 
             // 同样更新Buff和物品栏
         }
-
-        FallDamage();
+        if (gameObject.GetComponent<PlayerController>().isMoving)
+        {
+            FallDamage();
+        }
         Die();
     }
 
@@ -131,7 +133,6 @@ public class Player : MonoBehaviour
     // debuff持续伤害，忍耐值
     private void ContinueDamage()
     {
-        float damagePerSecond = 1f;
         StartCoroutine(Continue());
         IEnumerator Continue()
         {

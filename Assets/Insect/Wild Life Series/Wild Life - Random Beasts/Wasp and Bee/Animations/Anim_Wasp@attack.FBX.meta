@@ -1,0 +1,188 @@
+fileFormatVersion: 2
+guid: a576084cedb8f0045bcacb0485e51779
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: WaspHub001
+    100004: WaspWing_L1
+    100006: root
+    100008: wasp_LOD1
+    100010: WaspAntena_L1
+    100012: WaspAntena_L2
+    100014: WaspAntena_R1
+    100016: WaspAntena_R2
+    100018: WaspHead
+    100020: WaspLLeg11
+    100022: WaspLLeg12
+    100024: WaspLLeg1Ankle
+    100026: WaspLLeg1Collarbone
+    100028: WaspLLeg21
+    100030: WaspLLeg22
+    100032: WaspLLeg2Ankle
+    100034: WaspLLeg2Collarbone
+    100036: WaspLLeg31
+    100038: WaspLLeg32
+    100040: WaspLLeg3Ankle
+    100042: WaspLLeg3Collarbone
+    100044: WaspNeck
+    100046: WaspRLeg11
+    100048: WaspRLeg12
+    100050: WaspRLeg1Ankle
+    100052: WaspRLeg1Collarbone
+    100054: WaspRLeg21
+    100056: WaspRLeg22
+    100058: WaspRLeg2Ankle
+    100060: WaspRLeg2Collarbone
+    100062: WaspRLeg31
+    100064: WaspRLeg32
+    100066: WaspRLeg3Ankle
+    100068: WaspRLeg3Collarbone
+    100070: WaspTail1
+    100072: WaspTail2
+    100074: WaspWing_L2
+    100076: WaspWing_R1
+    100078: WaspWing_R2
+    400000: //RootNode
+    400002: WaspHub001
+    400004: WaspWing_L1
+    400006: root
+    400008: wasp_LOD1
+    400010: WaspAntena_L1
+    400012: WaspAntena_L2
+    400014: WaspAntena_R1
+    400016: WaspAntena_R2
+    400018: WaspHead
+    400020: WaspLLeg11
+    400022: WaspLLeg12
+    400024: WaspLLeg1Ankle
+    400026: WaspLLeg1Collarbone
+    400028: WaspLLeg21
+    400030: WaspLLeg22
+    400032: WaspLLeg2Ankle
+    400034: WaspLLeg2Collarbone
+    400036: WaspLLeg31
+    400038: WaspLLeg32
+    400040: WaspLLeg3Ankle
+    400042: WaspLLeg3Collarbone
+    400044: WaspNeck
+    400046: WaspRLeg11
+    400048: WaspRLeg12
+    400050: WaspRLeg1Ankle
+    400052: WaspRLeg1Collarbone
+    400054: WaspRLeg21
+    400056: WaspRLeg22
+    400058: WaspRLeg2Ankle
+    400060: WaspRLeg2Collarbone
+    400062: WaspRLeg31
+    400064: WaspRLeg32
+    400066: WaspRLeg3Ankle
+    400068: WaspRLeg3Collarbone
+    400070: WaspTail1
+    400072: WaspTail2
+    400074: WaspWing_L2
+    400076: WaspWing_R1
+    400078: WaspWing_R2
+    2100000: wasp_01
+    2100002: wasp_01_A
+    4300000: wasp_LOD1
+    7400000: attack
+    9500000: //RootNode
+    13700000: wasp_LOD1
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wasp_01
+    second: {fileID: 2100000, guid: 497e6f173d29e0848acf1b72c3e508a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wasp_01_A
+    second: {fileID: 2100000, guid: d18f6f5932c2b5f4fbccda01449c3bb1, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.001
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

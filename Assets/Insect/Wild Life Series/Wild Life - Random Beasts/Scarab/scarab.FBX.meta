@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: c565f7ec0b59cff4c87e3e3e8e450861
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: root
+    100002: //RootNode
+    100004: scarab_LOD0
+    100006: scarab_LOD1
+    100008: ScarabHead
+    100010: ScarabHub001
+    100012: ScarabLArm1
+    100014: ScarabLArm21
+    100016: ScarabLArm22
+    100018: ScarabLLeg11
+    100020: ScarabLLeg12
+    100022: ScarabLLeg1Ankle
+    100024: ScarabLLeg1Collarbone
+    100026: ScarabLLeg21
+    100028: ScarabLLeg22
+    100030: ScarabLLeg2Ankle
+    100032: ScarabLLeg31
+    100034: ScarabLLeg32
+    100036: ScarabLLeg3Ankle
+    100038: ScarabNeck
+    100040: ScarabRArm1
+    100042: ScarabRArm11
+    100044: ScarabRArm2
+    100046: ScarabRLeg11
+    100048: ScarabRLeg12
+    100050: ScarabRLeg1Ankle
+    100052: ScarabRLeg1Collarbone
+    100054: ScarabRLeg21
+    100056: ScarabRLeg22
+    100058: ScarabRLeg2Ankle
+    100060: ScarabRLeg31
+    100062: ScarabRLeg32
+    100064: ScarabRLeg3Ankle
+    100066: ScarabTail1
+    100068: ScarabTail2
+    100070: ScarabWingL11
+    100072: ScarabWingL12
+    100074: ScarabWingL2
+    100076: ScarabWingR11
+    100078: ScarabWingR12
+    100080: ScarabWingR2
+    400000: root
+    400002: //RootNode
+    400004: scarab_LOD0
+    400006: scarab_LOD1
+    400008: ScarabHead
+    400010: ScarabHub001
+    400012: ScarabLArm1
+    400014: ScarabLArm21
+    400016: ScarabLArm22
+    400018: ScarabLLeg11
+    400020: ScarabLLeg12
+    400022: ScarabLLeg1Ankle
+    400024: ScarabLLeg1Collarbone
+    400026: ScarabLLeg21
+    400028: ScarabLLeg22
+    400030: ScarabLLeg2Ankle
+    400032: ScarabLLeg31
+    400034: ScarabLLeg32
+    400036: ScarabLLeg3Ankle
+    400038: ScarabNeck
+    400040: ScarabRArm1
+    400042: ScarabRArm11
+    400044: ScarabRArm2
+    400046: ScarabRLeg11
+    400048: ScarabRLeg12
+    400050: ScarabRLeg1Ankle
+    400052: ScarabRLeg1Collarbone
+    400054: ScarabRLeg21
+    400056: ScarabRLeg22
+    400058: ScarabRLeg2Ankle
+    400060: ScarabRLeg31
+    400062: ScarabRLeg32
+    400064: ScarabRLeg3Ankle
+    400066: ScarabTail1
+    400068: ScarabTail2
+    400070: ScarabWingL11
+    400072: ScarabWingL12
+    400074: ScarabWingL2
+    400076: ScarabWingR11
+    400078: ScarabWingR12
+    400080: ScarabWingR2
+    4300000: scarab_LOD0
+    4300002: scarab_LOD1
+    9500000: //RootNode
+    13700000: scarab_LOD0
+    13700002: scarab_LOD1
+    20500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: scarab_01
+    second: {fileID: 2100000, guid: 7200a034072eeea4688dc8471c4b2111, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: scarab_01_alpha
+    second: {fileID: 2100000, guid: 254cae048ebf1e646ab04ad89f796698, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.01
+    globalScale: 0.1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.00127
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
