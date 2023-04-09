@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46218c6bc6c6d33469dbf1facd3db70b, type: 3}
+  m_Name: Dialogue_SO
+  m_EditorClassIdentifier: 
+  Nodes:
+  - Pos: 0
+    Type: 0
+    Avatar: {fileID: 0}
+    Info: "\u6211\u559C\u6B22\u4F60\uFF01"
+    Options: []
+    Events: []
+  - Pos: 1
+    Type: 1
+    Avatar: {fileID: 0}
+    Info: "\u6211\u7231\u4F60\uFF01"
+    Options: []
+    Events: []
+  - Pos: 2
+    Type: 0
+    Avatar: {fileID: 0}
+    Info: "\u6211\u7231\u4F603000\u904D\uFF01\n\n\n\n"
+    Options: []
+    Events: []
+  - Pos: 3
+    Type: 0
+    Avatar: {fileID: 0}
+    Info: "\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01"
+    Options: []
+    Events: []
+  - Pos: 4
+    Type: 0
+    Avatar: {fileID: 0}
+    Info: 
+    Options: []
+    Events: []
+  - Pos: 5
+    Type: 0
+    Avatar: {fileID: 0}
+    Info: "\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01\u6211\u7231\u4F603000\u904D\uFF01"
+    Options: []
+    Events: []
+  - Pos: 6
+    Type: 0
+    Avatar: {fileID: 0}
+    Info: 5555
+    Options: []
+    Events: []
+  - Pos: 7
+    Type: 0
+    Avatar: {fileID: 0}
+    Info: 454156165156
+    Options: []
+    Events: []
+  - Pos: 8
+    Type: 2
+    Avatar: {fileID: 0}
+    Info: 651891561
+    Options:
+    - Info: 
+      Pos: 0
+    - Info: 
+      Pos: 0
+    Events: []

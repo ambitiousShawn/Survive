@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb26042b301a94459617547f032eca3, type: 3}
+  m_Name: Tip_SO
+  m_EditorClassIdentifier: 
+  Nodes:
+  - ID: 0
+    Q: "\u54C8\u54C8\u54C8\u54C8\u54C8\u54C8\u54C8"
+    A: "\u54C8\u54C8\u54C8\u54C8\u54C8\u54C8\u54C8"
+  - ID: 1
+    Q: "\u5475\u5475\u5475\u5475\u5475\u5475\u5475"
+    A: "\u5475\u5475\u5475\u5475\u5475\u5475\u5475"
+  - ID: 2
+    Q: "\u563F\u563F\u563F\u563F\u563F\u563F\u563F"
+    A: "\u563F\u563F\u563F\u563F\u563F\u563F\u563F"
+  - ID: 3
+    Q: "\u545C\u545C\u545C\u545C\u545C\u545C\u545C"
+    A: "\u545C\u545C\u545C\u545C\u545C\u545C\u545C"
+  - ID: 4
+    Q: "\u54FC\u54FC\u54FC\u54FC\u54FC\u54FC\u54FC"
+    A: "\u54FC\u54FC\u54FC\u54FC\u54FC\u54FC\u54FC"
