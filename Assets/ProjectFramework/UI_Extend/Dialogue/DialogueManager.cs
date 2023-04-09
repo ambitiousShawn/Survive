@@ -39,7 +39,7 @@ namespace Shawn.ProjectFramework
 
         public void Tick()
         {
-            if (m_CanStep && Input.GetKeyDown(KeyCode.Space))
+            if (m_CanStep && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
             {
                 Step();
             }

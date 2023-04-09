@@ -24,7 +24,7 @@ namespace Shawn.ProjectFramework
         public int rand2;
         public float waitTime = 1.5f;
 
-        private UGUI_DrawCardPanel panel;
+        public UGUI_DrawCardPanel panel;
         
         public void Init()
         {
@@ -36,26 +36,9 @@ namespace Shawn.ProjectFramework
             if (panel == null)
                 panel = PanelManager.Instance.GetPanelByName("UGUI_DrawCardPanel") as UGUI_DrawCardPanel;
 
-            //KeyModelTest();
         }
 
-        //Test
-        private void KeyModelTest()
-        {
-            if (Input.GetKeyDown(KeyCode.I))
-            {
-                PanelManager.Instance.ShowPanel<UGUI_DrawCardPanel>("UGUI_DrawCardPanel");
-            }
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-                if (panel != null)
-                {
-                    EnableDrawCard();
-                }
-            }
-        }
-
-        private void EnableDrawCard()
+        public void EnableDrawCard()
         {
             rand1 = Random.Range(MinValue, MaxValue);
             rand2 = Random.Range(MinValue, MaxValue);

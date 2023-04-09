@@ -42,45 +42,7 @@ namespace Shawn.ProjectFramework
     /*测试程序*/
         public void Tick()
         {
-            /*# region 测试
-            if (Input.GetKeyDown(KeyCode.M))
-            {
-                PanelManager.Instance.ShowPanel<UGUI_BeginPanel>("UGUI_BeginPanel");
-            }
-            if (Input.GetKeyDown(KeyCode.N))
-            {
-                PanelManager.Instance.ShowPanel<UGUI_MainUIPanel>("UGUI_MainUIPanel");
-            }
-            if (Input.GetKeyDown(KeyCode.B))
-            {
-                DialogueManager.Instance.ShowDialogue(0);
-            }
-            if (Input.GetKeyDown(KeyCode.V))
-            {
-                DialogueManager.Instance.ShowDialogue(5);
-            }
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                BuffManager.Instance.AddBuff(0, () =>
-                {
-                    Debug.Log("和风守护buff已触发");
-                });
-            }
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                BuffManager.Instance.AddBuff(1, () =>
-                {
-                    Debug.LogError("烧伤Debuff已触发");
-                });
-            }
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                BuffManager.Instance.AddBuff(2, () =>
-                {
-                    Debug.LogWarning("冻伤Debuff已触发");
-                });
-            }
-            # endregion 测试*/
+            
         }
 
         public BasePanel GetPanelByName (string panelName)

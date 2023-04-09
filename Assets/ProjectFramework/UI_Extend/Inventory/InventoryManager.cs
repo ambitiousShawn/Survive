@@ -29,30 +29,7 @@ namespace Shawn.ProjectFramework
         public void Tick()
         {
             if (BagPanel == null) BagPanel = PanelManager.Instance.GetPanelByName("UGUI_MainUIPanel") as UGUI_MainUIPanel;
-            if (HousePanel == null) HousePanel = PanelManager.Instance.GetPanelByName("UGUI_WarehousePanel") as UGUI_WarehousePanel;
-
-            //Test
-            /*if (Input.GetKeyDown(KeyCode.R))
-            {
-                AddItemToBag(0, 2);
-            }
-
-            if (Input.GetKeyDown(KeyCode.T))
-            {
-                AddItemToBag(1, 3);
-            }
-            if (Input.GetKeyDown(KeyCode.Y))
-            {
-                AddItemToBag(2, 5);
-            }
-            if (Input.GetKeyDown(KeyCode.U))
-            {
-                ConsumeItem("À¶Ë®¾§");
-            }
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                PanelManager.Instance.ShowPanel<UGUI_WarehousePanel>("UGUI_WarehousePanel");
-            }*/
+            if (HousePanel == null) HousePanel = PanelManager.Instance.GetPanelByName("UGUI_WarehousePanel") as UGUI_WarehousePanel;            
         }
 
         /// <summary>
