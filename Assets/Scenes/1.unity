@@ -6736,6 +6736,8 @@ MonoBehaviour:
   speed: 5
   turnSpeed: 360
   damage: 5
+  minForce: -0.05
+  maxForce: 0.05
 --- !u!135 &202572354
 SphereCollider:
   m_ObjectHideFlags: 0

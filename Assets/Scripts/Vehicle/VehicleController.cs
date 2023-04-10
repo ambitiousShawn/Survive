@@ -19,6 +19,10 @@ public class VehicleController : MonoBehaviour
     // 刚体
     private Rigidbody vehicleRigidBody;
 
+    // 施加力范围
+    [SerializeField] private float minForce = 0f;
+    [SerializeField] private float maxForce = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +32,8 @@ public class VehicleController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        AddWind();
+
         if (currentState)
         {
             GatherInput();
@@ -80,13 +86,42 @@ public class VehicleController : MonoBehaviour
         currentState = state;
     }
 
+    // 虚拟风
+    private void AddWind()
+    {
+        // 随机刮风
+        float wind = Random.value;
+        if (wind < 0.5f)
+        {
+            // 随机力
+            Vector3 Force = new Vector3(Random.Range(minForce, maxForce), 0, Random.Range(minForce, maxForce));
+            StartCoroutine(Wind());
+            IEnumerator Wind()
+            {
+                vehicleRigidBody.AddForce(Force, ForceMode.Impulse);
+                yield return new WaitForSeconds(5f);
+            }
+        }
+    }
+
     // 撞击耐久度下降
     public void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Obstacle"))
+        if (collision.gameObject.CompareTag("Obstacle"))
         {
+            // 撞击障碍物耐久度下降
             float velocityDamage = damage * vehicleRigidBody.velocity.magnitude;
-            vehicle.GetComponent<VehicleSystem>().Damage(velocityDamage);
+            StartCoroutine(TakeDamage());
+            IEnumerator TakeDamage()
+            {
+                vehicle.GetComponent<VehicleSystem>().Damage(velocityDamage);
+                yield return new WaitForSeconds(1f);
+            }
+        }
+        else if (collision.gameObject.CompareTag("Enemy"))
+        {
+            // 撞击敌人停止
+            vehicleRigidBody.velocity = Vector3.zero;
         }
     }
 }
