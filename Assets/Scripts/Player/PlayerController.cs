@@ -25,7 +25,9 @@ public class PlayerController : MonoBehaviour
     // 刚体
     [SerializeField] private Rigidbody rb;
     // 移动速度
-    [SerializeField] private float speed = 5;
+    [SerializeField] private float speed = 5f;
+    // 初始速度
+    [SerializeField] private float originalSpeed;
     // 转向速度
     [SerializeField] private float turnSpeed = 360;
     // 移动向量
@@ -35,6 +37,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        originalSpeed = speed;
     }
 
     // Update is called once per frame
@@ -75,7 +78,7 @@ public class PlayerController : MonoBehaviour
     // 获取输入
     void GatherInput()
     {
-        input = new Vector3(Input.GetAxisRaw("Horizontal"),0,Input.GetAxisRaw("Vertical"));
+        input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
     }
 
     // 朝向，确保当前移动符合逻辑
@@ -100,6 +103,24 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         rb.MovePosition(transform.position + (transform.forward * input.magnitude) * speed * Time.deltaTime);
+    }
+
+    // debuff减速
+    public void Slow(float duration, float slowedSpeed)
+    {
+        StartCoroutine(SlowCoroutine(duration, slowedSpeed));
+        // 将敌人速度设置为slowedSpeed
+
+        IEnumerator SlowCoroutine(float duration, float slowedSpeed)
+        {
+            speed = slowedSpeed;
+
+            // 等待指定的持续时间
+            yield return new WaitForSeconds(duration);
+
+            // 恢复敌人原始速度
+            speed = originalSpeed;
+        }
     }
 
     // 检测是否接触地面

@@ -6,6 +6,7 @@ using Shawn.ProjectFramework;
 public class Player : MonoBehaviour
 {
     Rigidbody rb;
+    public GameObject CameraPivot;
 
     // 生命值
     public const float maxHealth = 100f;
@@ -37,11 +38,13 @@ public class Player : MonoBehaviour
 
             // 同样更新Buff和物品栏
         }
+
+        // 角色控制时检测摔落伤害和死亡
         if (gameObject.GetComponent<PlayerController>().isMoving)
         {
             FallDamage();
+            Die();
         }
-        Die();
     }
 
     void Start()
@@ -68,18 +71,18 @@ public class Player : MonoBehaviour
         if (rb.velocity.y < -criticalVelocity && touchGround)
         {
             bool trigger = true;
-            if (trigger) 
+            if (trigger)
             {
                 // 协程
                 StartCoroutine(Fall());
                 IEnumerator Fall()
                 {
                     TakeDamage(fallDamage);
-                    trigger = false;
                     Debug.Log("FallDamage!");
 
                     yield return new WaitForSeconds(1);
                 }
+                trigger = false;
             }
         }
     }
@@ -104,7 +107,7 @@ public class Player : MonoBehaviour
     public void BodyFluidPickUp(float fluid)
     {
         currentBodyFluid += fluid;
-        if(currentBodyFluid > maxBodyFluid)
+        if (currentBodyFluid > maxBodyFluid)
         {
             currentBodyFluid = maxBodyFluid;
         }
@@ -118,21 +121,32 @@ public class Player : MonoBehaviour
         BodyFluidPickUp(pickUpPerSecond * 2);
     }
 
-    // debuff眩晕
-    private void Vertigo()
+    // debuff眩晕，参数为持续时间和晃动幅度
+    private void Vertigo(float duration, float magnitude)
     {
-        
+        CameraPivot.GetComponent<CameraController>().ShakeCamera(duration, magnitude);
+        // 增添雾化效果，在UI上实现
     }
 
-    // debuff视野受限
-    private void LimitedView()
+    // debuff视野受限，参数为时长和范围
+    private void LimitedView(float time, float range)
     {
-
+        // 记录初始视野大小
+        float size = Camera.main.orthographicSize;
+        StartCoroutine(Timer());
+        IEnumerator Timer()
+        {
+            Camera.main.orthographicSize = range;
+            yield return new WaitForSeconds(time);
+        }
+        // 恢复原始大小
+        Camera.main.orthographicSize = size;
     }
 
     // debuff持续伤害，忍耐值
     private void ContinueDamage()
     {
+        float damagePerSecond = 1f;
         StartCoroutine(Continue());
         IEnumerator Continue()
         {

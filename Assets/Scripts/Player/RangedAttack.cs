@@ -63,12 +63,12 @@ public class RangedAttack : MonoBehaviour
     private IEnumerator ShootProjectile()
     {
         isShooting = true;
-        while(isShooting)
+        while (isShooting)
         {
             GameObject projectileInstance = Instantiate(projectilePerfab, launchPoint.position, Quaternion.identity);
             Projectile projectile = projectileInstance.GetComponent<Projectile>();
 
-            if(projectile != null )
+            if (projectile != null)
             {
                 projectile.velocity = velocity;
                 projectile.damagePerSecond = damagePerSecond;
@@ -76,8 +76,7 @@ public class RangedAttack : MonoBehaviour
                 projectile.launchDirection = launchDirection;
                 Destroy(projectileInstance, 5f);
             }
-            yield return new
-            WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(2.5f);
         }
     }
 
@@ -154,7 +153,7 @@ public class RangedAttack : MonoBehaviour
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        if(Physics.Raycast(ray.origin, offset, out hit))
+        if (Physics.Raycast(ray.origin, offset, out hit))
         {
             // 物理检测位置为目标位置
             targetPosition = hit.point;
@@ -169,7 +168,7 @@ public class RangedAttack : MonoBehaviour
         float timeStep = trajectoryPredicitionTimeStep;
 
         LineRenderer lineRenderer = follower.GetComponent<LineRenderer>();
-        if(!lineRenderer)
+        if (!lineRenderer)
         {
             lineRenderer = follower.AddComponent<LineRenderer>();
         }
@@ -199,7 +198,7 @@ public class RangedAttack : MonoBehaviour
     void CheckLineRenderer(GameObject gameObject)
     {
         LineRenderer line = follower.GetComponent<LineRenderer>();
-        if(line != null)
+        if (line != null)
         {
             Destroy(line);
         }
@@ -209,7 +208,7 @@ public class RangedAttack : MonoBehaviour
     Vector3 CalculateLaunchVelocity(Vector3 launchDirection, float chargeTime)
     {
         float multiplier;
-        if(chargeTime > maxChargeTime)
+        if (chargeTime > maxChargeTime)
         {
             multiplier = 1;
         }
