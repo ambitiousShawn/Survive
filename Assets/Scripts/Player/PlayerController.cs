@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
     // 获取输入
     void GatherInput()
     {
-        input = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
+        input = new Vector3(-Input.GetAxisRaw("Vertical"), 0, Input.GetAxisRaw("Horizontal"));
     }
 
     // 朝向，确保当前移动符合逻辑

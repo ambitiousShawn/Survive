@@ -6,7 +6,7 @@ public class PlayerInteraction : MonoBehaviour
 {
     public GameObject player;
     public GameObject vehicle;
-    private float distance = 5f;
+    [SerializeField] private float distance = 1.5f;
 
     // Ä¬ÈÏ½ÇÉ«¿ØÖÆ
     private bool playerController = true;
@@ -61,7 +61,8 @@ public class PlayerInteraction : MonoBehaviour
             vehicleController = false;
             vehicle.GetComponent<VehicleController>().ChangeState(false);
             player.GetComponent<PlayerController>().isMoving = true;
-            player.transform.position = vehicle.transform.position + vehicle.transform.right * distance;
+            player.GetComponent<BoxCollider>().enabled = true;
+            player.transform.position = vehicle.transform.position + Vector3.right * distance;
         }
         else
         {
@@ -69,6 +70,7 @@ public class PlayerInteraction : MonoBehaviour
             vehicleController = true;
             vehicle.GetComponent<VehicleController>().ChangeState(true);
             player.GetComponent<PlayerController>().isMoving = false;
+            player.GetComponent<BoxCollider>().enabled = false;
             lastUpdateTime = Time.time;
         }
     }

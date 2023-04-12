@@ -20,6 +20,7 @@ public class Interaction : MonoBehaviour
     // 所有GameObject添加标签,玩家添加球体检测trigger Collider即可
     private void OnTriggerEnter(Collider other)
     {
+        thing = other;
         switch (other.tag)
         {
             case "Item":
@@ -41,20 +42,25 @@ public class Interaction : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        thing = other;
         // UI退出，待解决
         switch (other.tag)
         {
             case "Item":
+                collect = false;
+                break;
             case "Door":
+                openDoor= false;
+                break;
             case "Destroy":
+                destroy = false;
+                break;
             case "NPC":
-                if (panel != null)
-                {
-                    panel.Hide();
-                }
                 break;
             default: break;
+        }
+        if (panel != null)
+        {
+            panel.Hide();
         }
     }
 
@@ -80,7 +86,7 @@ public class Interaction : MonoBehaviour
         Item item = collider.gameObject.GetComponent<Item>();
         // 显示按E收集（***待实现***）
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && item != null)
         {
             // ID如何获取
             int id = item.ID;

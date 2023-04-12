@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
 
     // 高度，在此之上产生摔落伤害
     [SerializeField] private float height = 5f;
-    [SerializeField] private float fallDamageRatio = 5f;
+    [SerializeField] private float fallDamageRatio = 2f;
 
     private void Update()
     {
