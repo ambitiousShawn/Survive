@@ -20,7 +20,12 @@ public class NaturalEnemy : MonoBehaviour
     // 飞行角度
     private float angle = 0;
     // 进入检测的时间
-    private float timeSincePlayerEnteredRadius;
+    [SerializeField] private float timeSincePlayerEnteredRadius;
+
+    // 玩家
+    public GameObject player;
+    // 躲藏
+    public bool hide;
 
     Animator animator;
 
@@ -31,23 +36,22 @@ public class NaturalEnemy : MonoBehaviour
 
     void Update()
     {
+        hide = player.GetComponent<PlayerController>().isHide;
         // （***待优化***）
-        animator.SetBool("fly", true);
+        //animator.SetBool("fly", true);
         Detect();
 
         // 控制点位置
         Vector3 controlPoint = center.transform.position + new Vector3(radius * Mathf.Cos(angle), 0, radius * Mathf.Sin(angle));
         // 下一位置
         Vector3 nextPosition = Vector3.MoveTowards(transform.position, controlPoint, speed * Time.deltaTime);
-
+        
         // 沿圆弧旋转
         Vector3 direction = nextPosition - transform.position;
-        float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
-        Quaternion targetRotation = Quaternion.Euler(0, targetAngle, 0);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.LookRotation(direction);
 
         // 更新位置
-        transform.position = new Vector3(nextPosition.x, transform.position.y, nextPosition.z);
+        transform.position = nextPosition;
 
         // 更新角度
         angle += rotationSpeed * Time.deltaTime;
@@ -59,14 +63,14 @@ public class NaturalEnemy : MonoBehaviour
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, playerDetectRadius);
         foreach (Collider collider in hitColliders)
         {
-            if (collider.CompareTag("Player"))
+            if (collider.CompareTag("Player") && !hide)
             {
                 // 计算逗留时间
                 timeSincePlayerEnteredRadius += Time.deltaTime;
                 // 超过时长死亡
                 if (timeSincePlayerEnteredRadius >= deathTimeThreshold)
                 {
-                    collider.GetComponent<Player>().Die();
+                    collider.GetComponent<Player>().GoDie();
                 }
             }
         }
@@ -74,7 +78,7 @@ public class NaturalEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !hide)
         {
             // 进入重置逗留时间
             timeSincePlayerEnteredRadius = 0f;

@@ -160,10 +160,15 @@ public class Player : MonoBehaviour
     // ËÀÍö
     public void Die()
     {
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
             Debug.Log("I am dead");
             Time.timeScale = 0;
         }
+    }
+
+    public void GoDie()
+    {
+        currentHealth = 0;
     }
 }

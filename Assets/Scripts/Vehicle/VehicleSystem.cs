@@ -68,7 +68,7 @@ public class VehicleSystem : MonoBehaviour
         itemList.Remove(item);
         currentCapacity -= item.size;
         // 告知
-        Debug.Log(item.name);
+        Debug.Log(item.Name);
     }
 
     // 合成

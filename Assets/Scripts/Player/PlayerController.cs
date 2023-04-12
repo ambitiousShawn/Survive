@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     // 角色控制
     public bool isMoving = true;
+    // 躲藏信息
+    public bool isHide = false;
 
     // 刚体
     [SerializeField] private Rigidbody rb;
@@ -152,5 +154,28 @@ public class PlayerController : MonoBehaviour
         isCharging = false;
         rb.velocity = new Vector3(rb.velocity.x, jumpForce + currentPower, rb.velocity.y);
         currentPower = 0;
+    }
+
+    // 躲藏
+    private void OnTriggerEnter(Collider other)
+    {
+        switch (other.tag)
+        {
+            case "Grass":
+                isHide = true;
+                break;
+            case "DeathZone":
+                gameObject.GetComponent<Player>().GoDie();
+                break;
+            default: break;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Grass"))
+        {
+            isHide = false;
+        }
     }
 }

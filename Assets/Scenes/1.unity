@@ -131,8 +131,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -345,6 +353,87 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
   m_PrefabInstance: {fileID: 1676432}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1988886
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8894031808348907850, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Name
+      value: DeathZone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.785905
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4444484
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.8073142
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907853, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Size.x
+      value: 6.715037
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907853, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0085185
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907853, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Size.z
+      value: 1.0504391
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907853, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Center.x
+      value: 0.014415979
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907853, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Center.y
+      value: 0.0042592287
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907853, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Center.z
+      value: 0.02521956
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b3c000be32177247959801c053c23f5, type: 3}
 --- !u!1001 &3572669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -876,8 +965,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -1363,8 +1460,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -1535,8 +1640,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (68)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -1611,6 +1724,10 @@ PrefabInstance:
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_RootOrder
@@ -1905,8 +2022,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -2397,8 +2522,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -2471,8 +2604,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -2545,8 +2686,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -3674,8 +3823,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (70)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -4481,8 +4638,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -5613,8 +5778,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (105)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -6470,8 +6643,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -6762,7 +6943,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &203839692
 PrefabInstance:
@@ -6920,8 +7101,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -7395,8 +7584,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (135)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -7543,8 +7740,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -7683,6 +7888,104 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
   m_PrefabInstance: {fileID: 228405543}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &228541568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 228541572}
+  - component: {fileID: 228541571}
+  - component: {fileID: 228541570}
+  - component: {fileID: 228541569}
+  m_Layer: 0
+  m_Name: NPC
+  m_TagString: NPC
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &228541569
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228541568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &228541570
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228541568}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &228541571
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228541568}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &228541572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228541568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.053, y: 2.73, z: -38.664}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &229161096
 GameObject:
   m_ObjectHideFlags: 0
@@ -8614,6 +8917,79 @@ CapsuleCollider:
   m_Height: 0.9152575
   m_Direction: 1
   m_Center: {x: -0.0032152236, y: 0.45953628, z: 0.0327481}
+--- !u!1001 &270203188
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8894031808348907850, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Name
+      value: DeathZone (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.5269718
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.59756905
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -63.8004
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907853, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Size.x
+      value: 5.5280266
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907853, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Size.y
+      value: 0.8768812
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907853, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Center.x
+      value: 0.1779933
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907853, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Center.y
+      value: -0.06155929
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b3c000be32177247959801c053c23f5, type: 3}
 --- !u!1001 &272942460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8696,8 +9072,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_RootOrder
@@ -9257,8 +9641,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (203)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -9498,6 +9890,7 @@ MonoBehaviour:
   powerIncreaseRate: 1.5
   isGrounded: 0
   isMoving: 1
+  isHide: 0
   rb: {fileID: 0}
   speed: 5
   originalSpeed: 0
@@ -10218,6 +10611,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
   m_PrefabInstance: {fileID: 321957907}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &323260238
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 323260239}
+  - component: {fileID: 323260240}
+  - component: {fileID: 323260241}
+  m_Layer: 0
+  m_Name: Interaction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &323260239
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323260238}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0285, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 301591300}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &323260240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323260238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ade5dabe6fc87c49b72b0e45e42623c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &323260241
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 323260238}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &323636190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10309,7 +10760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalScale.x
@@ -10325,31 +10776,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.067
+      value: -1.3
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.101
+      value: 2.938
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.98
+      value: 23.19
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.052521925
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.9986198
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10357,7 +10808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -186.021
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -10692,8 +11143,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (205)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -11480,8 +11939,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (241)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -11953,8 +12420,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (138)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -12393,8 +12868,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (48)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -12708,8 +13191,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (96)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -12856,8 +13347,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (99)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -13078,8 +13577,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -13220,7 +13727,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &397493325
 PrefabInstance:
@@ -13542,6 +14049,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5810017978283021297, guid: 75baae4b94c3fcb43a6a2ae0ed684998, type: 3}
   m_PrefabInstance: {fileID: 403006996}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &409548976 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+  m_PrefabInstance: {fileID: 549802988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &412980491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13624,8 +14136,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (110)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -14319,8 +14839,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (95)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -14610,8 +15138,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (137)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -14856,8 +15392,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -15627,8 +16171,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -15696,8 +16248,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -15844,8 +16404,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (123)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -16214,8 +16782,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -16362,8 +16938,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -16687,8 +17271,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (128)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -17752,8 +18344,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (80)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -18443,8 +19043,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (61)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_TagString
+      value: Destroy
       objectReference: {fileID: 0}
     - target: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_RootOrder
@@ -18517,8 +19125,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (117)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -18734,8 +19350,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (58)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_TagString
+      value: Destroy
       objectReference: {fileID: 0}
     - target: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_RootOrder
@@ -18800,6 +19424,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
   m_PrefabInstance: {fileID: 549802988}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &549802993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 409548976}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.85556597, y: 0.5345735, z: 0.8734083}
+  m_Center: {x: -0.016994419, y: 0.028849095, z: 0.004014523}
 --- !u!1001 &551335779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18808,8 +19445,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (100)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -19736,7 +20381,7 @@ Transform:
   - {fileID: 957012632}
   - {fileID: 277075929}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &556825892
 PrefabInstance:
@@ -19968,8 +20613,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -20116,8 +20769,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (206)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -20885,8 +21546,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (65)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -20959,8 +21628,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -21462,7 +22139,7 @@ Transform:
   - {fileID: 1954659882}
   - {fileID: 1042051056}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &639193810
 PrefabInstance:
@@ -22668,8 +23345,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (127)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -22816,8 +23501,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -22975,6 +23668,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
   m_PrefabInstance: {fileID: 683325642}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &688114481
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.821115
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5639669
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -69.45603
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92872965
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.3707578
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -43.525
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894996, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_Name
+      value: Item (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
 --- !u!1001 &692290954
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23057,8 +23807,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (41)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -23131,8 +23889,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -23437,7 +24203,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &708262869
 PrefabInstance:
@@ -24300,8 +25066,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (126)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -26321,8 +27095,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (133)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -27417,7 +28199,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &857696965
 PrefabInstance:
@@ -28141,8 +28923,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (243)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -28289,8 +29079,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -28447,7 +29245,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 884782609}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.76414204
   m_Height: 0.9152575
@@ -28609,8 +29407,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (103)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -29423,8 +30229,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (92)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -30257,8 +31071,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (209)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -30706,8 +31528,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -31279,8 +32109,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -31353,8 +32191,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (111)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -31575,8 +32421,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -31649,8 +32503,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (56)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -32073,6 +32935,11 @@ CapsuleCollider:
   m_Height: 0.9152575
   m_Direction: 1
   m_Center: {x: -0.0032152236, y: 0.45953628, z: 0.0327481}
+--- !u!1 &1011256200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+  m_PrefabInstance: {fileID: 1950477471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1012053748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32137,8 +33004,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8027594031469585410, guid: 326d053bdd1aa3a438922c178fec8b73, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 8027594031469585410, guid: 326d053bdd1aa3a438922c178fec8b73, type: 3}
       propertyPath: m_Name
       value: BigStone 2 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027594031469585410, guid: 326d053bdd1aa3a438922c178fec8b73, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 326d053bdd1aa3a438922c178fec8b73, type: 3}
@@ -32517,6 +33392,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
   m_PrefabInstance: {fileID: 1031509725}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1034986274 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+  m_PrefabInstance: {fileID: 1088242950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1035079240
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32747,8 +33627,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -32852,8 +33740,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -33246,8 +34142,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -33909,8 +34813,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -34131,8 +35043,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -34210,11 +35130,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 97c52b102dcf5b640a8266fd2da2e2cb, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 97c52b102dcf5b640a8266fd2da2e2cb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.4629636
+      value: 4.471181
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 97c52b102dcf5b640a8266fd2da2e2cb, type: 3}
       propertyPath: m_LocalPosition.y
@@ -34222,11 +35142,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 97c52b102dcf5b640a8266fd2da2e2cb, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.3948684
+      value: -4.44322
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 97c52b102dcf5b640a8266fd2da2e2cb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7595943
+      value: 0.58235914
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 97c52b102dcf5b640a8266fd2da2e2cb, type: 3}
       propertyPath: m_LocalRotation.x
@@ -34234,7 +35154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 97c52b102dcf5b640a8266fd2da2e2cb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.6503971
+      value: -0.8129316
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 97c52b102dcf5b640a8266fd2da2e2cb, type: 3}
       propertyPath: m_LocalRotation.z
@@ -34246,7 +35166,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 97c52b102dcf5b640a8266fd2da2e2cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -81.143
+      value: -108.767
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 97c52b102dcf5b640a8266fd2da2e2cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -34340,8 +35260,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_TagString
+      value: Destroy
       objectReference: {fileID: 0}
     - target: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_RootOrder
@@ -34406,6 +35334,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
   m_PrefabInstance: {fileID: 1088242950}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1088242955
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034986274}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.85556597, y: 0.5345735, z: 0.8734083}
+  m_Center: {x: -0.01698679, y: 0.028850287, z: 0.0040006945}
 --- !u!1001 &1091919888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34414,8 +35355,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (115)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -34488,8 +35437,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -34567,7 +35524,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094130698}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.76414204
   m_Height: 0.9152575
@@ -35193,8 +36150,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (124)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -35365,8 +36330,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -35439,8 +36412,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (91)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -35513,8 +36494,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (208)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -36105,8 +37094,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -36536,7 +37533,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1154167449}
   m_LocalRotation: {x: 0.23911765, y: 0.3696438, z: -0.09904577, w: 0.89239913}
-  m_LocalPosition: {x: 0.067, y: 3.101, z: 0.98}
+  m_LocalPosition: {x: -1.3, y: 2.938, z: 23.19}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36657,8 +37654,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (106)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -36953,8 +37958,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -37471,8 +38484,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -37992,6 +39013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile Bot 2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -38063,8 +39088,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (93)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -38137,8 +39170,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (130)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -38727,8 +39768,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (49)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -38801,8 +39850,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -38949,8 +40006,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -39315,8 +40380,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -40351,8 +41424,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -40430,7 +41511,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1299794119}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.76414204
   m_Height: 0.9152575
@@ -40592,8 +41673,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -41055,8 +42144,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -41578,8 +42675,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -42099,6 +43204,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile Top 1 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
       value: 107
@@ -42392,8 +43501,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (112)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -42993,9 +44110,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1381423490}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.000000029802319, y: -0, z: -0.0000000074505797, w: 1}
+  m_LocalPosition: {x: 0.0000009536743, y: -0.00000047683716, z: -1.000001}
+  m_LocalScale: {x: 1.0000004, y: 1.0000001, z: 1.0000005}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1154167450}
@@ -43009,8 +44126,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -43157,8 +44282,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (97)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -43683,8 +44816,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -44495,8 +45636,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -44643,8 +45792,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (98)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -44717,8 +45874,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (129)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -45013,8 +46178,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (67)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -45087,8 +46260,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -45477,8 +46658,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (207)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -45847,8 +47036,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -46167,8 +47364,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -46241,8 +47446,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -46315,8 +47528,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (242)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -48221,8 +49442,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (74)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -48533,6 +49762,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
   m_PrefabInstance: {fileID: 1621349372}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1621413389
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.157
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.677
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.196
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894996, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_Name
+      value: Item (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
 --- !u!1001 &1621470587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49078,8 +50364,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (136)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -50033,8 +51327,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (116)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -50329,8 +51631,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (54)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -50775,6 +52085,10 @@ PrefabInstance:
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (63)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_RootOrder
@@ -51339,8 +52653,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -51418,7 +52740,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717628929}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.76414204
   m_Height: 0.9152575
@@ -51488,8 +52810,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4577034113271871886, guid: 24457fdf8e66c3c49b7599931e0fdcb2, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4577034113271871886, guid: 24457fdf8e66c3c49b7599931e0fdcb2, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577034113271871886, guid: 24457fdf8e66c3c49b7599931e0fdcb2, type: 3}
+      propertyPath: m_TagString
+      value: Destroy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24457fdf8e66c3c49b7599931e0fdcb2, type: 3}
@@ -51506,8 +52836,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -52196,8 +53534,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -52326,8 +53672,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4577034113271871886, guid: 24457fdf8e66c3c49b7599931e0fdcb2, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4577034113271871886, guid: 24457fdf8e66c3c49b7599931e0fdcb2, type: 3}
       propertyPath: m_Name
       value: PP_Rock_Moss_Grown_09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577034113271871886, guid: 24457fdf8e66c3c49b7599931e0fdcb2, type: 3}
+      propertyPath: m_TagString
+      value: Destroy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24457fdf8e66c3c49b7599931e0fdcb2, type: 3}
@@ -53414,8 +54768,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (59)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -53488,8 +54850,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -54291,7 +55661,7 @@ Transform:
   - {fileID: 425131773}
   - {fileID: 588612407}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1838527996
 PrefabInstance:
@@ -54301,8 +55671,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -55433,8 +56811,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (101)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -55507,8 +56893,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (139)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -55921,7 +57315,7 @@ Transform:
   - {fileID: 1923174043}
   - {fileID: 1293558731}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1887217053
 PrefabInstance:
@@ -56005,8 +57399,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -56352,8 +57754,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (57)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -57418,6 +58828,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
   m_PrefabInstance: {fileID: 1935006910}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1937424580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+  m_PrefabInstance: {fileID: 540366577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1937424584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937424580}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.85556597, y: 0.5345735, z: 0.8734083}
+  m_Center: {x: -0.016991558, y: 0.028849095, z: 0.0040121386}
 --- !u!1001 &1937564370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57722,8 +59150,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -57796,8 +59232,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_Name
       value: Rock_01 (60)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405846476849542632, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
+      propertyPath: m_TagString
+      value: Destroy
       objectReference: {fileID: 0}
     - target: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
       propertyPath: m_RootOrder
@@ -57862,6 +59306,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7405846476849834440, guid: c6308cb7062fac34e8e50600086b12a1, type: 3}
   m_PrefabInstance: {fileID: 1950477471}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1950477476
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011256200}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.85556597, y: 0.5345735, z: 0.8734083}
+  m_Center: {x: -0.01698202, y: 0.028849095, z: 0.004019291}
 --- !u!1001 &1954659881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57968,7 +59425,7 @@ Transform:
   - {fileID: 223027508}
   - {fileID: 1043856148}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1967859433
 PrefabInstance:
@@ -58047,8 +59504,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -58269,8 +59734,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (52)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -58445,7 +59918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: e2f07c5daaa14c44d843e8ba6682df4b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: e2f07c5daaa14c44d843e8ba6682df4b, type: 3}
       propertyPath: m_LocalScale.x
@@ -58609,8 +60082,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (109)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -58753,8 +60234,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (125)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -59887,8 +61376,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (64)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -59961,8 +61458,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (62)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -60429,8 +61934,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -60503,8 +62016,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (45)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -60569,6 +62090,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
   m_PrefabInstance: {fileID: 2046391951}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2046668886
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.04525
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.1559267
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -35.065395
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894996, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_Name
+      value: Item (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
 --- !u!1001 &2050495677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60577,8 +62155,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -61120,12 +62706,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 745646d23f113b3409d54fa1ee50577f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 10
   radius: 5
   rotationSpeed: 1
   center: {fileID: 855698597}
-  playerDetectRadius: 10
+  playerDetectRadius: 5
   deathTimeThreshold: 3
+  timeSincePlayerEnteredRadius: 0
+  player: {fileID: 301591299}
+  hide: 0
+--- !u!54 &2075203174
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075203166}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2080301084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61793,8 +63398,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (43)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -62089,8 +63702,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (113)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -62529,8 +64150,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (104)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -62603,8 +64232,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -62934,7 +64571,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2123346729
 PrefabInstance:
@@ -63018,8 +64655,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_Name
       value: Tile Top 1 (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3196648517536708714, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5114996075067899094, guid: 3df9158ae7c86a64ca9128178be2a2f4, type: 3}
       propertyPath: m_RootOrder
@@ -63190,8 +64835,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (140)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -63264,8 +64917,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -63412,8 +65073,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_Name
       value: Tile Bot 2 (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1911000842864643869, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 8569049185289328770, guid: b24af410a59a0cc4c8f01f3ad358b943, type: 3}
       propertyPath: m_RootOrder
@@ -63756,8 +65425,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 554554649}
     m_Modifications:
     - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_Name
       value: Plant 2 (46)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703040221364307242, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
+      propertyPath: m_TagString
+      value: Grass
       objectReference: {fileID: 0}
     - target: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
       propertyPath: m_RootOrder
@@ -63822,3 +65499,117 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8233102405603228788, guid: 30cd4b8a989daaa4fbb273ee70bf99f6, type: 3}
   m_PrefabInstance: {fileID: 2146253935}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1956927974884055144
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.871836
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.214
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -23.95698
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894953, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956927973659894996, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+      propertyPath: m_Name
+      value: Item
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4c37119ada55a1c4984ce10a4e76fdfe, type: 3}
+--- !u!1001 &8894031808342825185
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8894031808348907850, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_Name
+      value: DeathZone
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.168
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.997255
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894031808348907852, guid: 7b3c000be32177247959801c053c23f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b3c000be32177247959801c053c23f5, type: 3}

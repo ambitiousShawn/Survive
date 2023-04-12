@@ -12,7 +12,7 @@ public class WeatherSystem : MonoBehaviour
     // 枚举定义天气状态
     private enum WeatherState
     {
-        Sunny,Rainy,Snowy
+        Sunny,Rainy,Snowy,Foggy
     };
     // 当前的天气状态
     private WeatherState currentWeatherState;
@@ -43,6 +43,7 @@ public class WeatherSystem : MonoBehaviour
 
     private void SetWeatherState(WeatherState weatherState)
     {
+        // 对应实际效果（***待添加***）
         switch (weatherState)
         {
             case WeatherState.Sunny:
@@ -56,6 +57,10 @@ public class WeatherSystem : MonoBehaviour
             case WeatherState.Snowy:
                 snowParticles.Play();
                 rainParticles.Stop();
+                break;
+            case WeatherState.Foggy: 
+                rainParticles.Stop();
+                snowParticles.Stop();
                 break;
             default: break;
         }

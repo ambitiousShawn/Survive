@@ -1,17 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Shawn.ProjectFramework;
 
-public class Item
+public class Item: MonoBehaviour
 {
-    public string name;
+    public int ID;
+    public string Name;
+    public string Describtion;
     public int size;
-    public string description;
-
-    public Item(string name, int size, string description)
-    {
-        this.name = name;
-        this.size = size;
-        this.description = description;
-    }
 }
