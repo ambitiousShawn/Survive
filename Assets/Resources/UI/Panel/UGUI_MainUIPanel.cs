@@ -108,7 +108,7 @@ namespace Shawn.ProjectFramework
         /// œ‘ æ ∞»°Õº±Í
         /// </summary>
         /// <param name="itemPos"></param>
-        public void ShowPickUp(Vector3 itemPos, int type)
+        public void ShowPickUp(Vector3 itemPos, string info ,int type = 1)
         {
             if (pick != null) return;
             Vector3 uiPos = Camera.main.WorldToScreenPoint(itemPos);
@@ -116,6 +116,7 @@ namespace Shawn.ProjectFramework
             pick.transform.parent = transform;
             pick.transform.localScale = Vector3.one;
             pick.transform.localPosition = uiPos;
+            pick.GetComponentInChildren<Text>().text = info;
         }
 
         public void HidePickUp()

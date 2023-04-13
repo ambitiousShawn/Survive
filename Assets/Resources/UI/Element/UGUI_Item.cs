@@ -18,6 +18,7 @@ namespace Shawn.ProjectFramework
             Btn = GetComponent<Button>();
             Btn.onClick.AddListener(() =>
             {
+                if (panel == null) return;
                 string name = gameObject.name;
                 int id;
                 if (transform.parent.name == BAG_PARENT_NAME)

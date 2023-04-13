@@ -38,6 +38,7 @@ public class VehicleSystem : MonoBehaviour
 
     private void Update()
     {
+
         // 做处理使得UpdateState受到变化时再调用
         if (nowState != currentState)
         {

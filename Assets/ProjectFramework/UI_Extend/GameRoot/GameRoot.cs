@@ -123,7 +123,7 @@ namespace Shawn.ProjectFramework
 
             if (Input.GetKeyDown(KeyCode.L))
             {
-                (PanelManager.Instance.GetPanelByName("UGUI_MainUIPanel") as UGUI_MainUIPanel).ShowPickUp(Vector3.zero, 1);
+                (PanelManager.Instance.GetPanelByName("UGUI_MainUIPanel") as UGUI_MainUIPanel).ShowPickUp(Vector3.zero, "½»»¥");
             }
             if (Input.GetKeyDown(KeyCode.Z))
             {

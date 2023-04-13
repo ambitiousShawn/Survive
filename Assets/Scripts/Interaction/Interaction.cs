@@ -7,12 +7,12 @@ using System.Runtime.CompilerServices;
 
 public class Interaction : MonoBehaviour
 {
-    // UI保存
-    BasePanel panel; // TODO：需要实现显示按下E键收集，开门，破坏，对话
+    UGUI_MainUIPanel panel; 
 
     private bool openDoor = false;
     private bool collect = false;
     private bool destroy = false;
+    private bool talk = false;
 
     // 如果附近多件物品
     private Collider thing;
@@ -25,16 +25,19 @@ public class Interaction : MonoBehaviour
         {
             case "Item":
                 collect = true;
+                panel?.ShowPickUp(other.transform.position, "拾取"); //显示交互
                 break;
             case "Door":
                 openDoor = true;
+                panel?.ShowPickUp(other.transform.position, "开启"); //显示交互
                 break;
             case "Destroy":
                 destroy = true;
+                panel?.ShowPickUp(other.transform.position, "摧毁"); //显示交互
                 break;
             case "NPC":
-                // 对应对话内容
-                DialogueManager.Instance.ShowDialogue(0);
+                talk = true;
+                panel?.ShowPickUp(other.transform.position, "交流"); //显示交互
                 break;
             default: break;
         }
@@ -42,31 +45,35 @@ public class Interaction : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        // UI退出，待解决
-        // TODO：实现提示消除效果
+        
         switch (other.tag)
         {
             case "Item":
                 collect = false;
+                panel?.HidePickUp();
                 break;
             case "Door":
                 openDoor= false;
+                panel?.HidePickUp();
                 break;
             case "Destroy":
                 destroy = false;
+                panel?.HidePickUp();
                 break;
             case "NPC":
+                talk = false;
+                panel?.HidePickUp();
                 break;
             default: break;
-        }
-        if (panel != null)
-        {
-            panel.Hide();
         }
     }
 
     private void Update()
     {
+        if (panel == null) 
+        {
+            panel = PanelManager.Instance.GetPanelByName("UGUI_MainUIPanel") as UGUI_MainUIPanel;
+        }
         if (collect)
         {
             CollectItem(thing);
@@ -79,6 +86,16 @@ public class Interaction : MonoBehaviour
         {
             OpenDoor(thing);
         }
+        else if (talk)
+        {
+            //TODO:后续更改具体对话
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                panel?.HidePickUp();
+                DialogueManager.Instance.ShowDialogue(0);
+            }
+            
+        }
     }
 
     // 物品收集逻辑
@@ -89,6 +106,7 @@ public class Interaction : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E) && item != null)
         {
+            panel?.HidePickUp();
             // ID如何获取
             int id = item.ID;
             InventoryManager.Instance.AddItemToBag(id);
@@ -105,6 +123,7 @@ public class Interaction : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
+            panel?.HidePickUp();
             // 具体怎么移动或者消失方式，信息可以在脚本中实现
             Destroy(other.gameObject);
 
@@ -117,15 +136,10 @@ public class Interaction : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            panel?.HidePickUp();
             Destroy(other.gameObject);
 
             destroy = false;
         }
-    }
-
-    // 对话
-    private void ShowDialog(int id)
-    {
-
     }
 }
