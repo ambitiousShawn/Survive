@@ -1,5 +1,6 @@
 using Shawn.ProjectFramework;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Shawn.ProjectFramework
@@ -24,6 +25,7 @@ namespace Shawn.ProjectFramework
             startBtn.onClick.AddListener(() =>
             {
                 //TODO:添加切换场景到游戏的接口逻辑
+                SceneManager.LoadScene(1);
             });
 
             loadBtn.onClick.AddListener(() =>
