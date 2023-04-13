@@ -10,6 +10,7 @@ namespace Shawn.ProjectFramework
         private const string BUFF_PATH = "UI/Element/Buff";
         private const string ITEM_PATH = "UI/Element/Item";
         private const string BUFF_TEXTURE_PATH = "Art/Buff/";
+        private const string PICKUP_PATH = "UI/Element/Pickup";
 
         private Image healthBar;
         private Image skillBar;
@@ -37,11 +38,19 @@ namespace Shawn.ProjectFramework
             healthBar.fillAmount = val / 100.00f; //TODO:将100换成总血量
         }
 
+
+        /// <summary>
+        /// 更新蓝条
+        /// </summary>
+        /// <param name="val"></param>
         public void UpdateSkillBar(float val)
         {
             skillBar.fillAmount = val / 100.00f; //TODO:将100换成总技能值
         }
 
+        /// <summary>
+        /// 更新Buff列表
+        /// </summary>
         public void UpdateBuffFrame()
         {
             GameObject buff;
@@ -61,6 +70,9 @@ namespace Shawn.ProjectFramework
             }
         }
 
+        /// <summary>
+        /// 更新仓库物品
+        /// </summary>
         public void UpdateInventoryItem()
         {
             GameObject item;
@@ -81,9 +93,36 @@ namespace Shawn.ProjectFramework
             }
         }
 
+        /// <summary>
+        /// 更新提示文字
+        /// </summary>
+        /// <param name="info"></param>
         public void UpdateTipInfo(string info)
         {
             notes.text = info;
+        }
+
+        private GameObject pick;
+
+        /// <summary>
+        /// 显示拾取图标
+        /// </summary>
+        /// <param name="itemPos"></param>
+        public void ShowPickUp(Vector3 itemPos, int type)
+        {
+            if (pick != null) return;
+            Vector3 uiPos = Camera.main.WorldToScreenPoint(itemPos);
+            pick = ResourcesManager.Instance.Load<GameObject>(PICKUP_PATH + type.ToString());
+            pick.transform.parent = transform;
+            pick.transform.localScale = Vector3.one;
+            pick.transform.localPosition = uiPos;
+        }
+
+        public void HidePickUp()
+        {
+            if (pick == null) return;
+            Destroy(pick);
+            pick = null;
         }
     }
 

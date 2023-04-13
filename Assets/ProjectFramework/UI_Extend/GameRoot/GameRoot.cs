@@ -18,7 +18,6 @@ namespace Shawn.ProjectFramework
             managers.Add(new DialogueManager());
             managers.Add(new BuffManager());
             managers.Add(new InventoryManager());
-            managers.Add(new TipManager());
             managers.Add(new DrawCardManager());
             managers.Add(new SkillManager());
             managers.Add(new CardProcessManager());
@@ -120,6 +119,15 @@ namespace Shawn.ProjectFramework
                 {
                     DrawCardManager.Instance.EnableDrawCard();
                 }
+            }
+
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                (PanelManager.Instance.GetPanelByName("UGUI_MainUIPanel") as UGUI_MainUIPanel).ShowPickUp(Vector3.zero, 1);
+            }
+            if (Input.GetKeyDown(KeyCode.Z))
+            {
+                (PanelManager.Instance.GetPanelByName("UGUI_MainUIPanel") as UGUI_MainUIPanel).HidePickUp();
             }
             # endregion ≤‚ ‘
         }

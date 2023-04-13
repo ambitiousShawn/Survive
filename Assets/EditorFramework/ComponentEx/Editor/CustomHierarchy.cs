@@ -43,16 +43,6 @@ namespace Shawn.EditorFramework
             }
         }
 
-        [MenuItem("CONTEXT/TipData_SO/序列化位置编号")]
-        static void SerializeID3()
-        {
-            Object tempObj = EditorUtility.InstanceIDToObject(Selection.activeInstanceID);
-            TipData_SO select = (TipData_SO)tempObj;
-            for (int id = 0; id < select.Nodes.Count; id++)
-            {
-                select.Nodes[id].ID = id;
-            }
-        }
 
         [MenuItem("CONTEXT/CardData_SO/序列化位置编号")]
         static void SerializeID4()
