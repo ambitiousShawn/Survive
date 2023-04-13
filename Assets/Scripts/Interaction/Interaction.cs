@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 public class Interaction : MonoBehaviour
 {
     // UI保存
-    BasePanel panel;
+    BasePanel panel; // TODO：需要实现显示按下E键收集，开门，破坏，对话
 
     private bool openDoor = false;
     private bool collect = false;
@@ -43,6 +43,7 @@ public class Interaction : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         // UI退出，待解决
+        // TODO：实现提示消除效果
         switch (other.tag)
         {
             case "Item":

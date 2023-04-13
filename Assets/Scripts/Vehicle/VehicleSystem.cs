@@ -74,6 +74,7 @@ public class VehicleSystem : MonoBehaviour
     // 合成
 
     // 仓库和背包的交互
+    // TODO：交互右键转移，进入风滚草后可转移物品
 
     // 载具维修
 
