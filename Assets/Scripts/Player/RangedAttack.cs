@@ -25,6 +25,9 @@ public class RangedAttack : MonoBehaviour
     // 发射点和Player来确定正向
     private Vector3 relative;
 
+    // 指针较远才可转向，增强可玩性
+    [SerializeField] private float distance = 1f;
+
     // 相机正向
     private Vector3 offset;
     // 渲染宽度
@@ -93,10 +96,10 @@ public class RangedAttack : MonoBehaviour
                 Vector3 lookDirection = targetPosition - bug.transform.position;
 
                 // 确保只在水平面内旋转
-                Vector3 look = new Vector3(lookDirection.x, bug.transform.position.y, lookDirection.z);
+                Vector3 look = new Vector3(lookDirection.x, 0, lookDirection.z);
 
                 // 指针较远时才可以旋转
-                if (look.magnitude > 5f)
+                if (look.magnitude > distance)
                 {
                     // 朝向目标
                     Quaternion rotation = Quaternion.LookRotation(lookDirection);

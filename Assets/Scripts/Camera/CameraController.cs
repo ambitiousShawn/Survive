@@ -28,6 +28,7 @@ public class CameraController : MonoBehaviour
     // 记录相机大小
     private float size;
     [SerializeField] private float minSize = 3f;
+    [SerializeField] private float minDistance = 1f;
 
     void Start()
     {
@@ -44,6 +45,10 @@ public class CameraController : MonoBehaviour
         // 防遮挡,相机相对轴距离变化
         if (AntiBlocking())
         {
+            if(offsetChange.magnitude < minDistance)
+            {
+                offsetChange = offsetChange.normalized * minDistance;
+            }
             Vector3 changeCameraposition = player.position + offsetChange;
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, changeCameraposition, smoothing * Time.deltaTime);
             float change = Camera.main.orthographicSize * offsetChange.magnitude / offset.magnitude;

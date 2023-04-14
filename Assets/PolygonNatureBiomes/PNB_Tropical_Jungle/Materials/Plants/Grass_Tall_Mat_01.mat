@@ -2,14 +2,18 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Grass_Tall_Mat_01
   m_Shader: {fileID: 4800000, guid: 6697e1f185bc8b840a2f02567abf15b5, type: 3}
-  m_ShaderKeywords: _FLATCOLOURSWITCH_ON _LEAFFLATCOLOURSWITCH_ON _LOD_FADE_CROSSFADE_ON
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _FLATCOLOURSWITCH_ON
+  - _LEAFFLATCOLOURSWITCH_ON
+  - _LOD_FADE_CROSSFADE_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -179,6 +183,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
     - _Big_Wave: 10
@@ -272,13 +277,13 @@ Material:
     - _Color0: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Emissive2Colour: {r: 0, g: 0, b: 0, a: 0}
-    - _EmissiveColour: {r: 0, g: 0.71420974, b: 0.98039216, a: 0}
+    - _EmissiveColour: {r: 0.49056602, g: 0.44551796, b: 0.18234244, a: 0}
     - _EmissiveColour1: {r: 0, g: 0, b: 0, a: 0}
     - _FrostingColour: {r: 1, g: 1, b: 1, a: 0}
     - _GustHighlight: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0}
     - _GustSmoothing: {r: 0.5, g: 0.5, b: 0.5, a: 0}
-    - _LeafBaseColour: {r: 0.100629, g: 0.2830189, b: 0, a: 0}
-    - _LeafNoiseColour: {r: 0.56184477, g: 0.6320754, b: 0, a: 0}
+    - _LeafBaseColour: {r: 0.8962264, g: 0.60215914, b: 0.11329652, a: 0}
+    - _LeafNoiseColour: {r: 0.83137256, g: 0.7231327, b: 0.46666667, a: 0}
     - _LeafNoiseLargeColour: {r: 0.07843138, g: 0.02015968, b: 0, a: 0}
     - _LeafTint: {r: 0.07843138, g: 0.02015968, b: 0, a: 0}
     - _SnowColour: {r: 1, g: 1, b: 1, a: 0}

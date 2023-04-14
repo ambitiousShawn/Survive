@@ -15,10 +15,10 @@ MonoBehaviour:
   active: 1
   temperature:
     m_OverrideState: 1
-    m_Value: -0.5
+    m_Value: -6
   tint:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -6
 --- !u!114 &-8535423458086990742
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -40,10 +40,10 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.316
+    m_Value: 0.201
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.263
+    m_Value: 0.287
   rounded:
     m_OverrideState: 0
     m_Value: 0
@@ -61,20 +61,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   postExposure:
-    m_OverrideState: 0
-    m_Value: -0.1
+    m_OverrideState: 1
+    m_Value: 0.02
   contrast:
     m_OverrideState: 1
-    m_Value: 12.6
+    m_Value: 2
   colorFilter:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     m_OverrideState: 0
     m_Value: -2
   saturation:
-    m_OverrideState: 1
-    m_Value: 7.5
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!114 &-4298835255410883607
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
   m_Name: LiftGammaGain
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   lift:
     m_OverrideState: 1
     m_Value: {x: 0.92509806, y: 0.861749, z: 1, w: 0.07414273}
@@ -111,14 +111,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   redOutRedIn:
-    m_OverrideState: 0
-    m_Value: 100
+    m_OverrideState: 1
+    m_Value: 93
   redOutGreenIn:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: -26
   redOutBlueIn:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 86
   greenOutRedIn:
     m_OverrideState: 0
     m_Value: 0
@@ -152,19 +152,19 @@ MonoBehaviour:
   active: 1
   threshold:
     m_OverrideState: 1
-    m_Value: 0.97
+    m_Value: 0.3
   intensity:
     m_OverrideState: 1
-    m_Value: 0.3
+    m_Value: 0.12
   scatter:
-    m_OverrideState: 0
-    m_Value: 0.35
+    m_OverrideState: 1
+    m_Value: 0.581
   clamp:
     m_OverrideState: 0
     m_Value: 65472
   tint:
     m_OverrideState: 0
-    m_Value: {r: 1, g: 0.30576408, b: 0, a: 1}
+    m_Value: {r: 0.30373797, g: 0.6792453, b: 0.3624911, a: 1}
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 0
@@ -199,6 +199,41 @@ MonoBehaviour:
   - {fileID: -1852757451651956649}
   - {fileID: -4298835255410883607}
   - {fileID: 6097812151644538379}
+  - {fileID: 2341575933774205404}
+--- !u!114 &2341575933774205404
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558a8e2b6826cf840aae193990ba9f2e, type: 3}
+  m_Name: ShadowsMidtonesHighlights
+  m_EditorClassIdentifier: 
+  active: 1
+  shadows:
+    m_OverrideState: 0
+    m_Value: {x: 1, y: 0.93249077, z: 0.7023556, w: 0.054999597}
+  midtones:
+    m_OverrideState: 0
+    m_Value: {x: 0.893962, y: 0.93037444, z: 1, w: 0.000000006931248}
+  highlights:
+    m_OverrideState: 1
+    m_Value: {x: 0.9814169, y: 1, z: 0.90198064, w: 0.21910292}
+  shadowsStart:
+    m_OverrideState: 0
+    m_Value: 0
+  shadowsEnd:
+    m_OverrideState: 0
+    m_Value: 0.3
+  highlightsStart:
+    m_OverrideState: 0
+    m_Value: 0.55
+  highlightsEnd:
+    m_OverrideState: 0
+    m_Value: 1
 --- !u!114 &5808137154499595628
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -211,10 +246,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 1
 --- !u!114 &6097812151644538379
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -227,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb4b772797da9440885e8bd939e9560, type: 3}
   m_Name: ColorCurves
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   master:
     m_OverrideState: 0
     m_Value:

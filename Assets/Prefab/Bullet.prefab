@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &9188952120580095533
+--- !u!1 &5020205127375271126
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,12 +8,12 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4312656332677062920}
-  - component: {fileID: 1829464934970133373}
-  - component: {fileID: 3445890740560769484}
-  - component: {fileID: 1156744623130821124}
-  - component: {fileID: 1517882696149297340}
-  - component: {fileID: 3254475279457395362}
+  - component: {fileID: 1673764491439713497}
+  - component: {fileID: 4798218658785084530}
+  - component: {fileID: 8342997969669667127}
+  - component: {fileID: 3496225535561985583}
+  - component: {fileID: 9000492467923491869}
+  - component: {fileID: 7208906093512080570}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -21,36 +21,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4312656332677062920
+--- !u!4 &1673764491439713497
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188952120580095533}
+  m_GameObject: {fileID: 5020205127375271126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7399998, y: 15.42, z: -10.900002}
+  m_LocalPosition: {x: 14.795372, y: 6.9620905, z: 73.3164}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1829464934970133373
+--- !u!33 &4798218658785084530
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188952120580095533}
+  m_GameObject: {fileID: 5020205127375271126}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3445890740560769484
+--- !u!23 &8342997969669667127
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188952120580095533}
+  m_GameObject: {fileID: 5020205127375271126}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,26 +86,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &1156744623130821124
+--- !u!135 &3496225535561985583
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188952120580095533}
+  m_GameObject: {fileID: 5020205127375271126}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1517882696149297340
+--- !u!114 &9000492467923491869
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188952120580095533}
+  m_GameObject: {fileID: 5020205127375271126}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81b2af8386132004587f4c92920d6538, type: 3}
@@ -115,13 +115,13 @@ MonoBehaviour:
   damagePerSecond: 3
   slowDuration: 5
   launchDirection: {x: 0, y: 0, z: 0}
---- !u!54 &3254475279457395362
+--- !u!54 &7208906093512080570
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9188952120580095533}
+  m_GameObject: {fileID: 5020205127375271126}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0

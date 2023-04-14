@@ -20,22 +20,25 @@ public class Interaction : MonoBehaviour
     // 所有GameObject添加标签,玩家添加球体检测trigger Collider即可
     private void OnTriggerEnter(Collider other)
     {
-        thing = other;
         switch (other.tag)
         {
             case "Item":
+                thing = other;
                 collect = true;
                 panel?.ShowPickUp(other.transform.position, "拾取"); //显示交互
                 break;
             case "Door":
+                thing = other;
                 openDoor = true;
                 panel?.ShowPickUp(other.transform.position, "开启"); //显示交互
                 break;
             case "Destroy":
+                thing = other;
                 destroy = true;
                 panel?.ShowPickUp(other.transform.position, "摧毁"); //显示交互
                 break;
             case "NPC":
+                thing = other;
                 talk = true;
                 panel?.ShowPickUp(other.transform.position, "交流"); //显示交互
                 break;

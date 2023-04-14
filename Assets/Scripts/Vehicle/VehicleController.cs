@@ -123,5 +123,9 @@ public class VehicleController : MonoBehaviour
             // ×²»÷µÐÈËÍ£Ö¹
             vehicleRigidBody.velocity = Vector3.zero;
         }
+        else
+        {
+            vehicleRigidBody.velocity = Vector3.zero;
+        }
     }
 }

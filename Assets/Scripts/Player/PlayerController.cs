@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour
     public float maxPower = 10f;
     // 增长速率
     public float powerIncreaseRate = 1.5f;
-    // 是否蓄力
-    private bool isCharging = false;
     // 当前力量
     private float currentPower;
     // 检测是否接触地面
@@ -23,6 +21,8 @@ public class PlayerController : MonoBehaviour
     public bool isMoving = true;
     // 躲藏信息
     public bool isHide = false;
+    // 跳跃
+    private bool isJumping = false;
 
     // 刚体
     [SerializeField] private Rigidbody rb;
@@ -35,10 +35,15 @@ public class PlayerController : MonoBehaviour
     // 移动向量
     private Vector3 input;
 
+    private Animator animator;
+    // 动画移动
+    [SerializeField] private Transform anim;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
         originalSpeed = speed;
     }
 
@@ -52,18 +57,22 @@ public class PlayerController : MonoBehaviour
             Look();
             if (isGrounded)
             {
+                rb.freezeRotation = false;
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                    animator.SetBool("fly", true);
                     StartChargeJump();
                 }
-                if (Input.GetKeyUp(KeyCode.Space))
-                {
-                    ReleaseJump();
-                }
-                if (isCharging)
-                {
-                    ChargeJump();
-                }
+            }
+            else
+            {
+                rb.freezeRotation = true;
+            }
+
+            if(isJumping && Input.GetKeyUp(KeyCode.Space))
+            {
+                ChargeJump();
+                StartCoroutine(ReleaseJump());
             }
         }
     }
@@ -86,7 +95,6 @@ public class PlayerController : MonoBehaviour
     // 朝向，确保当前移动符合逻辑
     void Look()
     {
-        var animator = GetComponent<Animator>();
         if (input != Vector3.zero)
         {
             animator.SetBool("walk", true);
@@ -136,24 +144,31 @@ public class PlayerController : MonoBehaviour
     // 开始蓄力跳跃
     void StartChargeJump()
     {
-        isCharging = true;
+        isJumping = true;
         currentPower = 0;
+        rb.useGravity = false;
     }
     // 蓄力
     void ChargeJump()
     {
         if (currentPower < maxPower)
         {
-            currentPower += Time.deltaTime * powerIncreaseRate;
-            isCharging = false;
+            currentPower += powerIncreaseRate;
+        }
+        else
+        {
+            StartCoroutine(ReleaseJump());
         }
     }
     // 跳跃
-    void ReleaseJump()
+    IEnumerator ReleaseJump()
     {
-        isCharging = false;
-        rb.velocity = new Vector3(rb.velocity.x, jumpForce + currentPower, rb.velocity.y);
+        isJumping = false;
+        animator.SetBool("fly", false);
+        rb.useGravity = true;
         currentPower = 0;
+        transform.position = anim.position;
+        yield return new WaitForSeconds(5f);
     }
 
     // 躲藏
