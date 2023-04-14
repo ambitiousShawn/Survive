@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Video;
@@ -8,12 +9,7 @@ public class PlayerController : MonoBehaviour
 {
     // 跳跃力度
     public float jumpForce = 10f;
-    // 最大力量
-    public float maxPower = 10f;
-    // 增长速率
-    public float powerIncreaseRate = 1.5f;
-    // 当前力量
-    private float currentPower;
+
     // 检测是否接触地面
     public bool isGrounded;
 
@@ -28,6 +24,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     // 移动速度
     [SerializeField] private float speed = 5f;
+
+    [SerializeField] private float flySpeed = 1f;
     // 初始速度
     [SerializeField] private float originalSpeed;
     // 转向速度
@@ -38,6 +36,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     // 动画移动
     [SerializeField] private Transform anim;
+    [SerializeField] private float maxTime = 2f;
+    [SerializeField] private float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -69,10 +69,9 @@ public class PlayerController : MonoBehaviour
                 rb.freezeRotation = true;
             }
 
-            if(isJumping && Input.GetKeyUp(KeyCode.Space))
+            if(isJumping)
             {
                 ChargeJump();
-                StartCoroutine(ReleaseJump());
             }
         }
     }
@@ -145,15 +144,15 @@ public class PlayerController : MonoBehaviour
     void StartChargeJump()
     {
         isJumping = true;
-        currentPower = 0;
         rb.useGravity = false;
     }
     // 蓄力
     void ChargeJump()
     {
-        if (currentPower < maxPower)
+        if (timer < maxTime)
         {
-            currentPower += powerIncreaseRate;
+            timer += Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, anim.position, flySpeed * Time.deltaTime);
         }
         else
         {
@@ -166,8 +165,8 @@ public class PlayerController : MonoBehaviour
         isJumping = false;
         animator.SetBool("fly", false);
         rb.useGravity = true;
-        currentPower = 0;
         transform.position = anim.position;
+        timer = 0;
         yield return new WaitForSeconds(5f);
     }
 
