@@ -115,14 +115,14 @@ public class PlayerController : MonoBehaviour
     }
 
     // debuff减速
-    public void Slow(float duration, float slowedSpeed)
+    public void Slow(float duration, float slowRatio)
     {
-        StartCoroutine(SlowCoroutine(duration, slowedSpeed));
+        StartCoroutine(SlowCoroutine());
         // 将敌人速度设置为slowedSpeed
 
-        IEnumerator SlowCoroutine(float duration, float slowedSpeed)
+        IEnumerator SlowCoroutine()
         {
-            speed = slowedSpeed;
+            speed = originalSpeed * slowRatio;
 
             // 等待指定的持续时间
             yield return new WaitForSeconds(duration);

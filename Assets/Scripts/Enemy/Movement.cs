@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour
 
     private void UseRangedAttack()
     {
-        // 如果有体液值，进行attack2，否则需要移动到近战范围后进行attack1
+        // 如果有体液值，进行attack2
         if (spider.GetComponent<Health>().currentBodyFluid >= usage)
         {
             launchDirection = player.transform.position - spider.transform.position;

@@ -59,18 +59,12 @@ public class VehicleController : MonoBehaviour
     // 朝向，确保当前移动符合逻辑
     void Look()
     {
-        var animator = GetComponent<Animator>();
         if (input != Vector3.zero)
         {
-            //animator.SetBool("walk", true);
             var relative = (transform.position + input.Toiso()) - transform.position;
             var rot = Quaternion.LookRotation(relative, Vector3.up);
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, turnSpeed * Time.deltaTime);
-        }
-        else
-        {
-            //animator.SetBool("walk", false);
         }
     }
 

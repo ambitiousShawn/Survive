@@ -5,6 +5,8 @@ using UnityEngine.UIElements;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private int ID;
+
     // 投射物初速度
     public Vector3 velocity;
     // 每秒伤害
@@ -36,14 +38,26 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag=="Enemy")
+        if(other.tag == "Enemy")
         {
             target = other;
+        }
+        else if(ID == 1 && other.tag == "Organ1")
+        {
+            Destroy(other.gameObject);
+        }
+        else if(ID == 2 && other.tag == "Organ2")
+        {
+            Destroy(other.gameObject);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
+        if(other.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
         target = null;
     }
 }

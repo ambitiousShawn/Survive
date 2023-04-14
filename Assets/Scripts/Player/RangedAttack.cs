@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
@@ -15,7 +16,7 @@ public class RangedAttack : MonoBehaviour
     public GameObject bug;
 
     // 投射物预制体
-    public GameObject projectilePerfab;
+    public GameObject[] projectilePerfab;
     // 投射物发射点
     public Transform launchPoint;
     // 发射方向
@@ -60,6 +61,8 @@ public class RangedAttack : MonoBehaviour
 
     // 技能切换
     [SerializeField] enum skill { first, second, third };
+
+    private int currentSkillID = (int)skill.first;
     // 切换数据，只需要判断是第几技能，根据技能 ID 来确定伤害和子弹（***待实现***）
     // 类似载具状态判定，预制体切换
 
@@ -68,7 +71,7 @@ public class RangedAttack : MonoBehaviour
         isShooting = true;
         while (isShooting)
         {
-            GameObject projectileInstance = Instantiate(projectilePerfab, launchPoint.position, Quaternion.identity);
+            GameObject projectileInstance = Instantiate(projectilePerfab[currentSkillID], launchPoint.position, Quaternion.identity);
             Projectile projectile = projectileInstance.GetComponent<Projectile>();
 
             if (projectile != null)
@@ -147,6 +150,13 @@ public class RangedAttack : MonoBehaviour
                 CheckLineRenderer(follower);
             }
         }
+    }
+
+    // 切换技能
+    public void UpdateSkill(int ID)
+    {
+        // 对应预制体
+        currentSkillID = ID;
     }
 
     void GetTargetPosition()

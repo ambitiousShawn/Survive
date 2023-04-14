@@ -1,5 +1,5 @@
+using Shawn.ProjectFramework;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MelleEnemy : MonoBehaviour
@@ -26,6 +26,14 @@ public class MelleEnemy : MonoBehaviour
     [SerializeField] private float damage = 10f;
     // ¹¥»÷¼ä¸ô
     [SerializeField] private float duration = 5f;
+
+    [SerializeField] private float slowDuration = 2f;
+
+    [SerializeField] private float ratio = 0.3f;
+
+    [SerializeField] private float limitedTime = 0.5f;
+    [SerializeField] private float limitedRange = 3f;
+
     // ÊÇ·ñ¹¥»÷
     private bool canAttack = true;
     // Ñ²º½
@@ -51,7 +59,7 @@ public class MelleEnemy : MonoBehaviour
         if (relative.magnitude < 5 * ridus)
         {
             // Íæ¼Ò
-            if (player.GetComponent<PlayerController>().isMoving)
+            if (player.GetComponent<PlayerController>().isMoving && !player.GetComponent<PlayerController>().isHide)
             {
                 isPatrol = false;
                 // Ô¶³Ì¹¥»÷
@@ -114,6 +122,16 @@ public class MelleEnemy : MonoBehaviour
         // ¶¯»­
         //animator.SetTrigger("attack1");
         player.GetComponent<Player>().TakeDamage(damage);
+
+        BuffManager.Instance.AddBuff(0, () =>
+        {
+            player.GetComponent<Player>().LimitedView(limitedTime, limitedRange);
+        });
+
+        BuffManager.Instance.AddBuff(2, () =>
+        {
+            player.GetComponent<PlayerController>().Slow(slowDuration, ratio);
+        });
 
         yield return new WaitForSeconds(duration);
         canAttack = true;

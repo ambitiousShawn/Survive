@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Shawn.ProjectFramework;
 
 public class PlayerInteraction : MonoBehaviour
 {
+    UGUI_MainUIPanel panel;
+
     public GameObject player;
     public GameObject vehicle;
     [SerializeField] private float distance = 1.5f;
@@ -32,6 +35,7 @@ public class PlayerInteraction : MonoBehaviour
         Vector3 relative = player.transform.position - vehicle.transform.position;
         if(relative.magnitude < distance)
         {
+            panel?.ShowPickUp(vehicle.transform.position, "风滚草，按下E键进入内部，按下F键开启"); //显示交互
             if (vehicleController)
             {
                 if(Input.GetKeyDown(KeyCode.Escape))
@@ -48,6 +52,10 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     playerController = false;
                     ChangeController();
+                }
+                else if(Input.GetKeyDown(KeyCode.E))
+                {
+                    // 加载内部
                 }
             }
         }

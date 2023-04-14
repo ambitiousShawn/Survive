@@ -122,14 +122,14 @@ public class Player : MonoBehaviour
     }
 
     // debuff眩晕，参数为持续时间和晃动幅度
-    private void Vertigo(float duration, float magnitude)
+    public void Vertigo(float duration, float magnitude)
     {
         CameraPivot.GetComponent<CameraController>().ShakeCamera(duration, magnitude);
         // 增添雾化效果，在UI上实现
     }
 
     // debuff视野受限，参数为时长和范围
-    private void LimitedView(float time, float range)
+    public void LimitedView(float time, float range)
     {
         // 记录初始视野大小
         float size = Camera.main.orthographicSize;
@@ -146,7 +146,7 @@ public class Player : MonoBehaviour
     // debuff持续伤害，忍耐值
     private void ContinueDamage()
     {
-        float damagePerSecond = 1f;
+        float damagePerSecond = 3f * (currentHealth + currentBodyFluid) / (maxHealth + maxBodyFluid);
         StartCoroutine(Continue());
         IEnumerator Continue()
         {

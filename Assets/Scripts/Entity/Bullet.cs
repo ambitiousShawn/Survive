@@ -1,3 +1,4 @@
+using Shawn.ProjectFramework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,9 +30,12 @@ public class Bullet : MonoBehaviour
         {
             transform.LookAt(target.transform.position);
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 2f);
-            // 换Buff实现
-            target.gameObject.GetComponent<PlayerController>().Slow(slowDuration, .2f);
-            target.gameObject.GetComponent<Player>().TakeDamage(damagePerSecond * Time.fixedDeltaTime);
+
+            // 持续伤害
+            BuffManager.Instance.AddBuff(1, () =>
+            {
+                target.gameObject.GetComponent<Player>().TakeDamage(damagePerSecond);
+            });
         }
     }
 
@@ -46,6 +50,10 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        if(other.tag == "Player")
+        {
+            Destroy(gameObject);
+        }
         target = null;
     }
 }

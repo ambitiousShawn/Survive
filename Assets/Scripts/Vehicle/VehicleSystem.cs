@@ -1,9 +1,12 @@
+using Shawn.ProjectFramework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class VehicleSystem : MonoBehaviour
 {
+    UGUI_MainUIPanel panel;
+
     // 载具属性：生命值和耐久度
     public float maxHealth = 100f;
     public float currentHealth;
@@ -73,9 +76,6 @@ public class VehicleSystem : MonoBehaviour
     }
 
     // 合成
-
-    // 仓库和背包的交互
-    // TODO：交互右键转移，进入风滚草后可转移物品
 
     // 载具维修
 
