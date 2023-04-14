@@ -14,6 +14,7 @@ namespace Shawn.ProjectFramework
 
         private Image healthBar;
         private Image skillBar;
+        private Image patientBar;
         private Text notes;
         private Transform buffFrame;
         private Transform itemFrame;
@@ -24,6 +25,7 @@ namespace Shawn.ProjectFramework
 
             healthBar = GetControl<Image>("HealthBar");
             skillBar = GetControl<Image>("SkillBar");
+            patientBar = GetControl<Image>("PatientBar");
             notes = GetControl<Text>("Bird");
             buffFrame = transform.Find("LeftTop/BuffFrame");
             itemFrame = transform.Find("Bottom/Bag/Grids");
@@ -46,6 +48,16 @@ namespace Shawn.ProjectFramework
         public void UpdateSkillBar(float val)
         {
             skillBar.fillAmount = val / 100.00f; //TODO:将100换成总技能值
+        }
+
+
+        /// <summary>
+        /// 更新耐力值
+        /// </summary>
+        /// <param name="val"></param>
+        public void UpdatePatientBar(float val)
+        {
+            patientBar.fillAmount = val / 100.00f; 
         }
 
         /// <summary>
