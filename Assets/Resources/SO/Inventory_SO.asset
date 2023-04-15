@@ -15,8 +15,8 @@ MonoBehaviour:
   Nodes:
   - ID: 0
     Type: 0
-    Name: "\u7EA2\u6C34\u6676"
-    Describtion: "\u7EA2\u6C34\u6676\u7EA2\u6C34\u6676\u7EA2\u6C34\u6676\u7EA2\u6C34\u6676"
+    Name: "\u6297\u6027\u836F\u6C34\uFF08\u5C0F\uFF09"
+    Describtion: "\u56DE\u590D25%\u5FCD\u8010\u503C"
   - ID: 1
     Type: 0
     Name: "\u84DD\u6C34\u6676"
