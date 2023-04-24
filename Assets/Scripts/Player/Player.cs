@@ -124,7 +124,6 @@ public class Player : MonoBehaviour
     // debuff眩晕，参数为持续时间和晃动幅度
     public void Vertigo(float duration, float magnitude)
     {
-        CameraPivot.GetComponent<CameraController>().ShakeCamera(duration, magnitude);
         // 增添雾化效果，在UI上实现
     }
 

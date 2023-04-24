@@ -82,9 +82,6 @@ public class MeleeAttack : MonoBehaviour
             // 敌人受击动画
             other.GetComponent<Animator>().SetTrigger("hit");
 
-            // 测试抖动
-            cameraPivot.GetComponent<CameraController>().ShakeCamera(5, 0.5f);
-
             Vector3 relative = other.transform.position - transform.position;
             Vector3 direction = new Vector3(relative.x, 0f, relative.z);
 

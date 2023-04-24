@@ -103,8 +103,8 @@ public class MelleEnemy : MonoBehaviour
             }
         }
 
-        Vector3 relative = new Vector3(way.x, 0, way.z);
-        Vector3 pos = new Vector3(enemy.transform.position.x, 0, enemy.transform.position.z);
+        Vector3 relative = way;
+        Vector3 pos = enemy.transform.position;
         // 计算方向向量，并旋转敌人
         Vector3 targetDirection = relative - pos;
         var rotate = Quaternion.LookRotation(targetDirection);

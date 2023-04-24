@@ -20,7 +20,7 @@ public class NaturalEnemy : MonoBehaviour
     // 飞行角度
     private float angle = 0;
     // 进入检测的时间
-    [SerializeField] private float timeSincePlayerEnteredRadius;
+    public float TimeSincePlayerEnteredRadius { get; set; }
 
     // 玩家
     public GameObject player;
@@ -39,7 +39,15 @@ public class NaturalEnemy : MonoBehaviour
         hide = player.GetComponent<PlayerController>().isHide;
         // （***待优化***）
         //animator.SetBool("fly", true);
-        Detect();
+        if (Detect())
+        {
+            // 计算逗留时间
+            TimeSincePlayerEnteredRadius += Time.deltaTime;
+        }
+        else
+        {
+            InitialTime();
+        }
 
         // 控制点位置
         Vector3 controlPoint = center.transform.position + new Vector3(radius * Mathf.Cos(angle), 0, radius * Mathf.Sin(angle));
@@ -58,38 +66,26 @@ public class NaturalEnemy : MonoBehaviour
         angle = Mathf.Repeat(angle, 360f);
     }
 
-    private void Detect()
+    private bool Detect()
     {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, playerDetectRadius);
         foreach (Collider collider in hitColliders)
         {
             if (collider.CompareTag("Player") && !hide)
             {
-                // 计算逗留时间
-                timeSincePlayerEnteredRadius += Time.deltaTime;
                 // 超过时长死亡
-                if (timeSincePlayerEnteredRadius >= deathTimeThreshold)
+                if (TimeSincePlayerEnteredRadius >= deathTimeThreshold)
                 {
                     collider.GetComponent<Player>().GoDie();
                 }
+                return true;
             }
         }
+        return false;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void InitialTime()
     {
-        if (other.CompareTag("Player") && !hide)
-        {
-            // 进入重置逗留时间
-            timeSincePlayerEnteredRadius = 0f;
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            timeSincePlayerEnteredRadius = Mathf.Infinity;
-        }
+        TimeSincePlayerEnteredRadius = 0f;
     }
 }
