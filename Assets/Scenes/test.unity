@@ -9569,13 +9569,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: rat
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cb1318314a04124458bfda29885ad2fd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: cb1318314a04124458bfda29885ad2fd, type: 3}
+      propertyPath: m_TagString
+      value: MeleeEnemy
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cb1318314a04124458bfda29885ad2fd, type: 3}
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cb1318314a04124458bfda29885ad2fd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.01
+      value: 7.03
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cb1318314a04124458bfda29885ad2fd, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9583,7 +9591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cb1318314a04124458bfda29885ad2fd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 73.91
+      value: 74.13
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: cb1318314a04124458bfda29885ad2fd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9769,15 +9777,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.42
+      value: 11.31
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.69
+      value: 4.648
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 72.76
+      value: 72.73
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c565f7ec0b59cff4c87e3e3e8e450861, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33078,7 +33086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100054, guid: 97c52b102dcf5b640a8266fd2da2e2cb, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: NaturalEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 97c52b102dcf5b640a8266fd2da2e2cb, type: 3}
       propertyPath: m_RootOrder
@@ -50225,7 +50233,7 @@ MonoBehaviour:
   bulletPerfab: {fileID: 5020205127375271126, guid: 7056098f6f6ab8244829f854d4d89280, type: 3}
   radius: 5
   height: 2
-  angle: 45
+  angle: 60
   usage: 5
   damage: 10
   duration: 5

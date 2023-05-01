@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -26,7 +24,7 @@ public class Movement : MonoBehaviour
     // 发射方向
     Vector3 launchDirection;
     // 是否攻击
-    private bool canAttack = false;
+    private bool canAttack = true;
 
 
     //-----------------------------------------------------
@@ -125,7 +123,7 @@ public class Movement : MonoBehaviour
 
                     for (float t = 0f; t < attackDuration; t += 0.1f)
                     {
-                        Vector3 p = CalculateProjectilePosition(enemyPos, playerPos, t);
+                        Vector3 p = CalculateProjectilePosition(enemyPos, t);
                         Debug.DrawLine(p, p + Vector3.up, Color.red);
                     }
 
@@ -163,12 +161,11 @@ public class Movement : MonoBehaviour
         canAttack = true;
     }
 
-    private Vector3 CalculateProjectilePosition(Vector3 origin, Vector3 target, float timeInFlight)
+    private Vector3 CalculateProjectilePosition(Vector3 origin, float timeInFlight)
     {
         float y = verticalSpeed * timeInFlight + (0.5f * Physics.gravity.y * Mathf.Pow(timeInFlight, 2f));
 
-        Vector3 horizontalDirection = (target - origin).normalized;
-        Vector3 result = origin + relative * horizontalSpeed + Vector3.up * y;
+        Vector3 result = origin + relative.normalized * horizontalSpeed + Vector3.up * y;
 
         return result;
     }
