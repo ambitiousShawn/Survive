@@ -5,26 +5,25 @@ using UnityEngine.UIElements;
 
 public class MeleeAttack : MonoBehaviour
 {
-    // 基础伤害值
-    public float baseDamage = 10f;
+    // 伤害比例
+    public float damageRatio = 0.3f;
     // 攻击范围
     public float attackRange = 1f;
     // 击退力度
     public float knockBackForce = 10f;
     // 击退时间
     public float knockBackTime = 1f;
-
     // 击中特效预制件
     public GameObject hitEffectPerfab;
     // 特效持续时间
     public float hitEffectDuration = 1f;
+    // 攻击间隔
+    [SerializeField] private float attackInterval;
 
     // 是否进行攻击
     private bool isAttacking = false;
     // 攻击范围检测器
     private SphereCollider attackCollider;
-
-    public GameObject cameraPivot;
     public GameObject player;
 
     private void Start()
@@ -39,9 +38,11 @@ public class MeleeAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 如果是玩家控制才可以近战攻击
         if (player.GetComponent<PlayerController>().isMoving)
         {
-            // 按下鼠标左键进行攻击
+            // 按下鼠标左键进行攻击且不在攻击cd中
+            // 区分近战远程需要判断鼠标右键状态
             if (Input.GetMouseButtonDown(0) && !Input.GetMouseButton(1) && !isAttacking)
             {
                 isAttacking = true;
@@ -52,7 +53,8 @@ public class MeleeAttack : MonoBehaviour
                     // 攻击动画
                     animator.SetTrigger("hit");
 
-                    Invoke(nameof(DisableAttack), 1.0f);
+                    // 攻击间隔
+                    StartCoroutine(DisableAttack());
                 }
 
                 //启用碰撞器
@@ -65,16 +67,25 @@ public class MeleeAttack : MonoBehaviour
         }
     }
 
+    IEnumerator DisableAttack()
+    {
+        isAttacking = false;
+        attackCollider.enabled = false;
+        yield return new WaitForSeconds(attackInterval);
+    }
+
+    // 近战范围敌人检测
     private void OnTriggerStay(Collider other)
     {
         if(!isAttacking)
         {
             return;
         }
-        if(other.CompareTag("Enemy"))
+        // 目前只可攻击近战敌人
+        if(other.CompareTag("MeleeEnemy"))
         {
-            // 伤害总大小
-            var damageAmount = baseDamage;
+            // 伤害总大小，最大生命值的比例伤害
+            var damageAmount = damageRatio * other.GetComponent<Health>().maxHealth;
 
             // 敌人承受伤害
             other.GetComponent<Health>().TakeDamage(damageAmount);
@@ -92,11 +103,5 @@ public class MeleeAttack : MonoBehaviour
             //Instantiate(hitEffectPerfab, other.ClosestPoint(transform.position), Quaternion.identity);
             //Destroy();
         }
-    }
-
-    private void DisableAttack()
-    {
-        isAttacking = false;
-        attackCollider.enabled = false;
     }
 }

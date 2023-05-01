@@ -5,13 +5,6 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    // 控制移动速度
-    public float speed = 5f;
-    // 初始速度
-    public float originalSpeed = 5f;
-    // 转向速度
-    public float turnSpeed = 180f;
-
     // 玩家
     public GameObject player;
     // 敌人
@@ -20,8 +13,10 @@ public class Movement : MonoBehaviour
     public Transform launchPoint;
     // 远程攻击预制体
     [SerializeField] private GameObject bulletPerfab;
-    // 检测范围
+    // 检测范围，圆锥范围相关数据
     [SerializeField] private float radius = 2f;
+    [SerializeField] private float height = 2f;
+    [SerializeField] private float angle = 15;
     // 远程攻击消耗
     [SerializeField] private float usage = 5f;
     // 远程技能伤害
@@ -30,27 +25,66 @@ public class Movement : MonoBehaviour
     [SerializeField] private float duration = 5f;
     // 发射方向
     Vector3 launchDirection;
-    // 发射速度大小
-    public float bulletSpeed = 1f;
     // 是否攻击
-    private bool canAttack = true;
+    private bool canAttack = false;
 
-    void Update()
-    {
-        Detect();
-    }
 
-    private void Detect()
+    //-----------------------------------------------------
+    // @author      OD
+    // @version     1.0.1
+    // @brief       预测轨迹
+    //-----------------------------------------------------
+    public float maxAttackRange = 5f;
+    public float attackDuration = 2f;
+    // 水平速度，决定多快击中
+    public float projectileSpeed = 1f;
+
+    // 相对最高点
+    [SerializeField] private float peakHeight = 1f;
+
+    private float flightDuration;
+    private float verticalSpeed;
+    private float horizontalSpeed;
+    private Vector3 relative;
+
+    private void OnTriggerStay(Collider other)
     {
-        RaycastHit hit;
-        Vector3 relative = launchPoint.position - spider.transform.position;
-        if (Physics.CapsuleCast(spider.transform.position, spider.transform.position + relative * radius, radius, relative, out hit))
+        if (other.gameObject.CompareTag("Player"))
         {
-            if (hit.collider.CompareTag("Player"))
+            Vector3 origin = transform.position;
+            Vector3 direction = other.transform.position - origin;
+            float verticalDistance = Vector3.Dot(direction.normalized, transform.up) * direction.magnitude;
+            
+
+            if (verticalDistance < height)
             {
-                UseRangedAttack();
+                float horizontalDistance = Vector3.Dot(direction.normalized, transform.right) * direction.magnitude;
+
+                float hDistAlongCone = (horizontalDistance / Mathf.Cos(angle / 2));
+                if (Mathf.Abs(hDistAlongCone) < radius)
+                {
+                    UseRangedAttack();
+                }
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Vector3 forward = transform.forward;
+
+        Vector3 left = Quaternion.Euler(0f, -angle / 2f, 0f) * forward;
+        Vector3 right = Quaternion.Euler(0f, angle / 2f, 0f) * forward;
+
+        Vector3 bottomLeft = transform.position + left * radius;
+        Vector3 bottomRight = transform.position + right * radius;
+
+        Gizmos.DrawLine(transform.position, bottomLeft);
+        Gizmos.DrawLine(transform.position, bottomRight);
+        Gizmos.DrawLine(bottomRight, bottomLeft);
+
+        Gizmos.DrawWireSphere(transform.position, radius);
+        Gizmos.DrawRay(transform.position, transform.up * height);
     }
 
     private void UseRangedAttack()
@@ -58,8 +92,47 @@ public class Movement : MonoBehaviour
         // 如果有体液值，进行attack2
         if (spider.GetComponent<Health>().currentBodyFluid >= usage)
         {
-            launchDirection = player.transform.position - spider.transform.position;
-            spider.transform.rotation = Quaternion.FromToRotation(spider.transform.forward, launchDirection);
+            Vector3 playerPos = player.transform.position;
+            Vector3 enemyPos = launchPoint.position;
+
+            Vector3 enemyToPlayer = playerPos - enemyPos;
+            // 水平相对
+            relative = new Vector3(enemyToPlayer.x, 0, enemyToPlayer.z);
+            float horizontalDistance = relative.magnitude;
+
+            if (enemyToPlayer.magnitude < maxAttackRange)
+            {
+                // 根据水平求解总时间
+                flightDuration = horizontalDistance / projectileSpeed;
+                float delta = Mathf.Pow(flightDuration, 2) * (peakHeight + Mathf.Abs(enemyToPlayer.y)) / peakHeight;
+                // 这里主要是避免出错
+                if (delta >= 0)
+                {
+                    // 求解第一段时间
+                    float timeToPeak = (Mathf.Sqrt(delta) - flightDuration) * peakHeight / Mathf.Abs(enemyToPlayer.y);
+
+                    Debug.DrawLine(enemyPos, enemyPos + relative.normalized * timeToPeak * horizontalSpeed);
+                    // 得到竖直方向初速度
+                    verticalSpeed = timeToPeak * -Physics.gravity.y;
+                    horizontalSpeed = projectileSpeed;
+
+                    float peakDistance = horizontalSpeed * timeToPeak;
+
+                    Vector3 peakPoint = enemyPos + relative.normalized * peakDistance + Vector3.up * peakHeight;
+
+                    Debug.DrawLine(enemyPos, peakPoint, Color.green);
+                    Debug.DrawLine(peakPoint, playerPos, Color.yellow);
+
+                    for (float t = 0f; t < attackDuration; t += 0.1f)
+                    {
+                        Vector3 p = CalculateProjectilePosition(enemyPos, playerPos, t);
+                        Debug.DrawLine(p, p + Vector3.up, Color.red);
+                    }
+
+                    launchDirection = relative.normalized * horizontalSpeed + Vector3.up * verticalSpeed;
+                    Debug.DrawLine(enemyPos, enemyPos + launchDirection, Color.green);
+                }
+            }
             // 发射预制体
             if (canAttack)
             {
@@ -68,7 +141,6 @@ public class Movement : MonoBehaviour
             }
         }
     }
-
     IEnumerator RangedAttack()
     {
         spider.GetComponent<Health>().UseAttack(usage);
@@ -80,30 +152,24 @@ public class Movement : MonoBehaviour
 
         if (bullet != null)
         {
-            bullet.velocity = launchDirection.normalized * bulletSpeed;
-            bullet.launchDirection = launchDirection;
+            bullet.velocity = launchDirection;
             bullet.damagePerSecond = damage;
-            Destroy(bulletInstance, 5f);
+            if (bulletInstance != null)
+            {
+                Destroy(bulletInstance, 5f);
+            }
         }
         yield return new WaitForSeconds(duration);
         canAttack = true;
     }
 
-    // 减速
-    internal void Slow(float duration, float slowedSpeed)
+    private Vector3 CalculateProjectilePosition(Vector3 origin, Vector3 target, float timeInFlight)
     {
-        StartCoroutine(SlowCoroutine(duration, slowedSpeed));
-        // 将敌人速度设置为slowedSpeed
+        float y = verticalSpeed * timeInFlight + (0.5f * Physics.gravity.y * Mathf.Pow(timeInFlight, 2f));
 
-        IEnumerator SlowCoroutine(float duration, float slowedSpeed)
-        {
-            speed = slowedSpeed;
+        Vector3 horizontalDirection = (target - origin).normalized;
+        Vector3 result = origin + relative * horizontalSpeed + Vector3.up * y;
 
-            // 等待指定的持续时间
-            yield return new WaitForSeconds(duration);
-
-            // 恢复敌人原始速度
-            speed = originalSpeed;
-        }
+        return result;
     }
 }

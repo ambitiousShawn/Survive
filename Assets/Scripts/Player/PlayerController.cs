@@ -1,33 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.Video;
+using UnityEngine.XR;
+
+public enum PlayerState
+{
+    Idle,
+    Move,
+    Jump
+}
 
 public class PlayerController : MonoBehaviour
 {
+    // 当前玩家状态
+    PlayerState currentState;
+
     // 跳跃力度
     public float jumpForce = 10f;
-
-    // 检测是否接触地面
-    public bool isGrounded;
-
-    // 角色控制
-    public bool isMoving = true;
-    // 躲藏信息
-    public bool isHide = false;
-    // 跳跃
-    private bool isJumping = false;
-
-    // 相机轴
-    [SerializeField] private Transform cameraPivot;
-
-    // 刚体
-    [SerializeField] private Rigidbody rb;
     // 移动速度
     [SerializeField] private float speed = 5f;
-
+    // TODO：跳跃需优化
     [SerializeField] private float flySpeed = 1f;
     // 初始速度
     [SerializeField] private float originalSpeed;
@@ -38,8 +34,20 @@ public class PlayerController : MonoBehaviour
     private float vertical;
     private float horizontal;
 
+    // 检测是否接触地面
+    public bool isGrounded;
+    // 角色控制，用于载具交互
+    public bool isMoving = true;
+    // 躲藏信息
+    public bool isHide = false;
+
+    // 相机轴
+    [SerializeField] private Transform cameraPivot;
+    // 刚体
+    [SerializeField] private Rigidbody rb;
+
     private Animator animator;
-    // 动画移动
+    // 动画移动 TODO：优化
     [SerializeField] private Transform anim;
     [SerializeField] private float maxTime = 2f;
     [SerializeField] private float timer;
@@ -50,45 +58,65 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         originalSpeed = speed;
+        currentState = PlayerState.Idle;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // 如果为玩家控制
         if (isMoving)
         {
-            CheckGrounded();
-            GatherInput();
-            Look();
+            if(Input.GetKey(KeyCode.Space) && isGrounded)
+            {
+                ChangeState(PlayerState.Jump);
+            }
+            else if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            {
+                ChangeState(PlayerState.Move);
+            }
+            else
+            {
+                ChangeState(PlayerState.Idle);
+            }
+
             if (isGrounded)
             {
+                // 在空中时锁定旋转
                 rb.freezeRotation = false;
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    animator.SetBool("fly", true);
-                    StartChargeJump();
-                }
             }
             else
             {
                 rb.freezeRotation = true;
-            }
-
-            if(isJumping)
-            {
-                ChargeJump();
             }
         }
     }
 
     void FixedUpdate()
     {
-        if (isMoving)
+        switch (currentState)
         {
-            // 移动更加顺滑
-            Move();
+            case PlayerState.Idle:
+                animator.SetBool("walk", false);
+                break;
+            case PlayerState.Jump:
+                animator.SetBool("fly", true);
+                Jump();
+                break;
+            case PlayerState.Move:
+                animator.SetBool("walk", true);
+                Move();
+                break;
+            default:
+                break;
         }
     }
+
+    //-----------------------------------------------------
+    // @author      OD
+    // @version     1.0.1
+    // @brief       行为
+    //-----------------------------------------------------
 
     // 获取输入
     void GatherInput()
@@ -96,30 +124,63 @@ public class PlayerController : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         horizontal = Input.GetAxisRaw("Horizontal");
     }
-
     // 朝向，确保当前移动符合逻辑
     void Look()
     {
-        if (vertical != 0 || horizontal != 0)
-        {
-            animator.SetBool("walk", true);
-            var relative = (cameraPivot.forward * vertical + cameraPivot.right * horizontal);
-            var rot = Quaternion.LookRotation(relative, Vector3.up);
+        // 根据相机正向运动
+        var relative = (cameraPivot.forward * vertical + cameraPivot.right * horizontal);
+        var rot = Quaternion.LookRotation(relative, Vector3.up);
 
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, turnSpeed * Time.deltaTime);
-        }
-        else
-        {
-            animator.SetBool("walk", false);
-        }
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, turnSpeed * Time.deltaTime);
     }
-
     // 移动
     void Move()
     {
+        GatherInput();
+        Look();
         float input = new Vector3(vertical, 0, horizontal).magnitude;
         rb.MovePosition(transform.position + (transform.forward * input) * speed * Time.deltaTime);
     }
+
+    // 开始蓄力跳跃
+    void StartChargeJump()
+    {
+        rb.useGravity = false;
+    }
+    // 蓄力
+    void ChargeJump()
+    {
+        if (timer < maxTime)
+        {
+            timer += Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, anim.position, flySpeed * Time.deltaTime);
+        }
+        else
+        {
+            StartCoroutine(ReleaseJump());
+        }
+    }
+    // 跳跃
+    IEnumerator ReleaseJump()
+    {
+        rb.useGravity = true;
+        transform.position = anim.position;
+        timer = 0;
+        yield return new WaitForSeconds(5f);
+        ChangeState(PlayerState.Idle);
+    }
+    // 跳跃
+    void Jump()
+    {
+        StartChargeJump();
+        ChargeJump();
+    }
+
+    //-----------------------------------------------------
+    // @author      OD
+    // @version     1.0.1
+    // @brief       debuff
+    //-----------------------------------------------------
 
     // debuff减速
     public void Slow(float duration, float slowRatio)
@@ -139,45 +200,33 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // 检测是否接触地面
-    void CheckGrounded()
+    //-----------------------------------------------------
+    // @author      OD
+    // @version     1.0.1
+    // @brief       检测
+    //-----------------------------------------------------
+
+    // 改变状态
+    void ChangeState(PlayerState newState)
     {
-        RaycastHit hit;
-        Vector3 positon = new Vector3(transform.position.x, transform.position.y + 0.2f, transform.position.z);
-        // 这部分射线长度值值确定
-        isGrounded = Physics.Raycast(positon, Vector3.down, out hit, 0.3f);
-    }
-    // 开始蓄力跳跃
-    void StartChargeJump()
-    {
-        isJumping = true;
-        rb.useGravity = false;
-    }
-    // 蓄力
-    void ChargeJump()
-    {
-        if (timer < maxTime)
+        if(currentState == newState)
         {
-            timer += Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, anim.position, flySpeed * Time.deltaTime);
+            return;
         }
         else
         {
-            StartCoroutine(ReleaseJump());
+            currentState = newState;
         }
     }
-    // 跳跃
-    IEnumerator ReleaseJump()
+    // 地面检测
+    private void OnCollisionEnter(Collision collision)
     {
-        isJumping = false;
-        animator.SetBool("fly", false);
-        rb.useGravity = true;
-        transform.position = anim.position;
-        timer = 0;
-        yield return new WaitForSeconds(5f);
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
     }
-
-    // 躲藏
+    // 躲藏与死域
     private void OnTriggerEnter(Collider other)
     {
         switch (other.tag)

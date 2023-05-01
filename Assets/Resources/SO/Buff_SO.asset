@@ -15,19 +15,19 @@ MonoBehaviour:
   Nodes:
   - ID: 0
     Type: 1
-    Name: "\u7729\u6655"
-    Describtion: "\u7729\u66552s"
+    Name: "\u89C6\u91CE\u53D7\u9650"
+    Describtion: "\u96FE\u5316\u6548\u679C"
     Time: 2
     Interval: 2.1
   - ID: 1
     Type: 1
     Name: "\u6D41\u8840"
     Describtion: "\u6301\u7EED\u4F24\u5BB3"
-    Time: 3
-    Interval: 1
+    Time: 0
+    Interval: 0.1
   - ID: 2
     Type: 1
     Name: "\u51CF\u901F"
     Describtion: "\u89D2\u8272\u901F\u5EA6\u964D\u4F4E"
-    Time: 3
-    Interval: 3.1
+    Time: 0
+    Interval: 0.1

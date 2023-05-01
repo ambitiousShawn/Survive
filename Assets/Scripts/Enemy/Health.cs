@@ -20,13 +20,21 @@ public class Health : MonoBehaviour
         currentBodyFluid = maxBodyFluid;
     }
 
+    private void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
     // 受到伤害的方法
     public void TakeDamage(float damageAmount)
     {
         currentHealth -= damageAmount;
-        if (currentHealth < 0)
+        if(currentHealth < 0)
         {
-            Die();
+            currentHealth = 0;
         }
     }
 
@@ -36,10 +44,28 @@ public class Health : MonoBehaviour
         currentBodyFluid -= usage;
     }
 
+    // 流血
+    public void ContinueDamage(float damagePerSecond, float duration)
+    {
+        StartCoroutine(Continue());
+        IEnumerator Continue()
+        {
+            float timer = 0f;
+            while (timer < duration)
+            {
+                TakeDamage(damagePerSecond * Time.deltaTime);
+
+                yield return null;
+
+                timer += Time.deltaTime;
+            }
+        }
+    }
+
     // 死亡
     public void Die()
     {
-        Debug.Log("I am dead");
+        Debug.Log("Enemy is dead");
         Destroy(gameObject);
     }
 }

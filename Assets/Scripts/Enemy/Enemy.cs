@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using Shawn.ProjectFramework;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour

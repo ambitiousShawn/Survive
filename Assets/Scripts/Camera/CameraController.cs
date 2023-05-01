@@ -1,5 +1,6 @@
 using UnityEngine;
 using Shawn.ProjectFramework;
+using System.Runtime.CompilerServices;
 
 public class CameraController : MonoBehaviour
 {
@@ -9,20 +10,20 @@ public class CameraController : MonoBehaviour
     [SerializeField] private Transform player;
     // top位置,用于发出射线检测，碰撞体内无法检测
     [SerializeField] private Transform top;
+    // 球体检测器
+    [SerializeField] SphereCollider sphereCollider;
 
     // 初始相对距离
-    [SerializeField] private float maxOffset = 1f;
+    [SerializeField] private float maxOffset;
     // 最小距离，确保不会穿过人物模型
-    [SerializeField] private float minOffset = 0f;
+    [SerializeField] private float minOffset;
     // 记录遮挡变化
     private float offsetChange;
-    // 记录遮挡变化量
-    private float deltaChange;
+    // 修正偏移
+    [SerializeField] private float fixOffset;
 
     // 方向向量, 保留旋转
     private Vector3 relative;
-    // 轴值和顶点间向量
-    private Vector3 offset;
 
     // 俯仰角和偏航角
     public float Pitch { get; private set; }
@@ -34,18 +35,22 @@ public class CameraController : MonoBehaviour
     public float smoothSpeed = 5f;
 
     // 垂直限幅
-    [SerializeField] private float maxAngle = 80f;
-    [SerializeField] private float minAngle = -80f;
+    [SerializeField] private float maxAngle;
+    [SerializeField] private float minAngle;
     // 旋转速度
     [SerializeField] private float rotationSpeed = 1.0f;
 
     // 视野限制
-    [SerializeField] private float maxFieldOfView = 60f;
-    [SerializeField] private float minFieldOfView = 20f;
-    [SerializeField] private float zoomSpeed = 2f;
+    [SerializeField] private float maxFieldOfView;
+    [SerializeField] private float minFieldOfView;
+    [SerializeField] private float zoomSpeed;
+    // 初始视野，遮挡缩放
+    private float originFieldOfView;
 
     // 锁住视角
     [SerializeField] private bool isLock = true;
+
+    RaycastHit hit;
 
     private void Awake()
     {
@@ -57,16 +62,12 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
+        sphereCollider = gameObject.GetComponent<SphereCollider>();
+        originFieldOfView = maxFieldOfView;
+
         PanelManager.Instance.ShowPanel<UGUI_MainUIPanel>("UGUI_MainUIPanel");
-        
-        // 初始位于玩家背后
-        transform.position = cameraPivot.position - maxOffset * player.forward;
-        // 相机视野范围
-        Camera.main.fieldOfView = maxFieldOfView;
-        // 初始化
-        relative = transform.position - cameraPivot.position;
-        offset = cameraPivot.position - top.position;
-        offsetChange = maxOffset;
+
+        ReturnOrigin();
         // 光标初始化
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -79,6 +80,7 @@ public class CameraController : MonoBehaviour
         FollowPlayer();
 
         CheckBlock();
+        AntiBlocking();
     }
 
     private void LateUpdate()
@@ -94,7 +96,8 @@ public class CameraController : MonoBehaviour
     private void FollowPlayer()
     {
         // 跟随，使用轴值防止角色旋转影响
-        cameraPivot.position = player.position;
+        // 同时，让轴值位于中心可以简化防遮挡，处理较方便
+        cameraPivot.position = top.position;
         // 相对
         relative = transform.position - cameraPivot.position;
     }
@@ -151,37 +154,37 @@ public class CameraController : MonoBehaviour
     {
         float zoom = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
         Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView - zoom, minFieldOfView, maxFieldOfView);
+        float ratio = Camera.main.fieldOfView / maxFieldOfView;
     }
 
     // 检查遮挡
     private void CheckBlock()
     {
-        RaycastHit hit;
-        float lastOffset = offsetChange;
-        if (Physics.Raycast(top.position, relative + offset, out hit, maxOffset, 3))
+        if (Physics.SphereCast(cameraPivot.position, sphereCollider.radius, relative, out hit, maxOffset, 3, QueryTriggerInteraction.Collide))
         {
-            // 获取距离，此时通过旋转跟随即可实现防遮挡
-            offsetChange = Mathf.Clamp(hit.distance, minOffset, maxOffset);
-            Debug.Log(offsetChange);
-            Debug.DrawRay(top.position, relative + offset, Color.red);
+            float targetOffset = Vector3.Dot(hit.point - cameraPivot.position, relative) - sphereCollider.radius - fixOffset;
+            offsetChange = Mathf.Lerp(offsetChange, Mathf.Clamp(targetOffset, minOffset, maxOffset), smoothSpeed * Time.deltaTime);
         }
-        else
-        {
-            offsetChange = maxOffset;
-        }
-        deltaChange = offsetChange - lastOffset;
     }
 
     // 防遮挡视野缩放
     private void AntiBlocking()
     {
-
+        // 根据轴值来确定最大值的大小
+        float ratio = offsetChange / maxOffset;
+        maxFieldOfView = ratio * originFieldOfView;
     }
 
     // 视角回旋
     private void ReturnOrigin()
     {
-
+        // 初始位于玩家背后
+        transform.position = cameraPivot.position - maxOffset * player.forward;
+        // 相机视野范围
+        Camera.main.fieldOfView = maxFieldOfView;
+        // 初始化
+        relative = transform.position - cameraPivot.position;
+        offsetChange = maxOffset;
     }
 
     // 相机抖动

@@ -7,6 +7,13 @@ public class Player : MonoBehaviour
 {
     Rigidbody rb;
     public GameObject CameraPivot;
+    UGUI_MainUIPanel panel;
+
+    //-----------------------------------------------------
+    // @author      OD
+    // @version     1.0.1
+    // @brief       角色属性
+    //-----------------------------------------------------
 
     // 生命值
     public const float maxHealth = 100f;
@@ -14,15 +21,31 @@ public class Player : MonoBehaviour
     // 体液值
     public const float maxBodyFluid = 100f;
     public float currentBodyFluid;
+
     // 每秒回复值
     public float pickUpPerSecond = 0.05f;
-
+    // 伤害
     public float damagePerSecond = 1f;
-    UGUI_MainUIPanel panel;
 
-    // 高度，在此之上产生摔落伤害
-    [SerializeField] private float height = 5f;
+    //-----------------------------------------------------
+    // @author      OD
+    // @version     1.0.1
+    // @brief       摔落伤害数据
+    //-----------------------------------------------------
+
+    // 高度阈值，在此之上产生摔落伤害
+    [SerializeField] private float heightThreshold = 5f;
+    // 摔落伤害系数
     [SerializeField] private float fallDamageRatio = 2f;
+    // 记录最高高度
+    private float maxHeight;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+        currentBodyFluid = maxBodyFluid;
+        rb = GetComponent<Rigidbody>();
+    }
 
     private void Update()
     {
@@ -36,57 +59,41 @@ public class Player : MonoBehaviour
             panel.UpdateHealthBar(currentHealth);
             panel.UpdateSkillBar(currentBodyFluid);
 
-            // 同样更新Buff和物品栏
+            // 同样更新Buff和物品栏，在添加buff时已经更新
         }
 
         // 角色控制时检测摔落伤害和死亡
         if (gameObject.GetComponent<PlayerController>().isMoving)
         {
-            FallDamage();
             Die();
-        }
-    }
-
-    void Start()
-    {
-        currentHealth = maxHealth;
-        currentBodyFluid = maxBodyFluid;
-        rb = GetComponent<Rigidbody>();
-    }
-
-    // 生命值降低
-    public void TakeDamage(float damage)
-    {
-        currentHealth -= damage;
-    }
-
-    // 摔落伤害
-    private void FallDamage()
-    {
-        // 根据速度来确定伤害
-        float criticalVelocity = Mathf.Sqrt(-2 * height * Physics.gravity.y);
-        bool touchGround = gameObject.GetComponent<PlayerController>().isGrounded;
-        float fallDamage = (Mathf.Pow(rb.velocity.y, 2) / -2 / Physics.gravity.y - height) * fallDamageRatio;
-        // 落地
-        if (rb.velocity.y < -criticalVelocity && touchGround)
-        {
-            bool trigger = true;
-            if (trigger)
+            // 记录最高点
+            if(transform.position.y > maxHeight)
             {
-                // 协程
-                StartCoroutine(Fall());
-                IEnumerator Fall()
-                {
-                    TakeDamage(fallDamage);
-                    Debug.Log("FallDamage!");
-
-                    yield return new WaitForSeconds(1);
-                }
-                trigger = false;
+                maxHeight = transform.position.y;
+                Debug.Log(maxHeight);
             }
         }
     }
 
+    // 比例伤害
+    public void TakeRatioDamage(float ratio)
+    {
+        float damage = ratio * maxHealth;
+        if (damage > currentHealth)
+        {
+            currentHealth = 0;
+        }
+        else
+        {
+            currentHealth -= ratio * maxHealth;
+        }
+    }
+
+    // 对角色造成伤害
+    public void TakeDamage(float damage)
+    {
+        currentHealth -= damage;
+    }
     // 体液值降低
     public void UseRangedAttack(float usage)
     {
@@ -102,7 +109,6 @@ public class Player : MonoBehaviour
             currentHealth = maxHealth;
         }
     }
-
     // 体液值物品回升
     public void BodyFluidPickUp(float fluid)
     {
@@ -121,31 +127,11 @@ public class Player : MonoBehaviour
         BodyFluidPickUp(pickUpPerSecond * 2);
     }
 
-    // debuff眩晕，参数为持续时间和晃动幅度
-    public void Vertigo(float duration, float magnitude)
-    {
-        // 增添雾化效果，在UI上实现
-    }
-
-    // debuff视野受限，参数为时长和范围
-    public void LimitedView(float time, float range)
-    {
-        // 记录初始视野大小
-        float size = Camera.main.orthographicSize;
-        StartCoroutine(Timer());
-        IEnumerator Timer()
-        {
-            Camera.main.orthographicSize = range;
-            yield return new WaitForSeconds(time);
-        }
-        // 恢复原始大小
-        Camera.main.orthographicSize = size;
-    }
-
     // debuff持续伤害，忍耐值
-    private void ContinueDamage()
+    public void ContinueReduce(float baseDamage)
     {
-        float damagePerSecond = 3f * (currentHealth + currentBodyFluid) / (maxHealth + maxBodyFluid);
+        // 降低速度降慢
+        float damagePerSecond = baseDamage * (currentHealth + currentBodyFluid) / (maxHealth + maxBodyFluid);
         StartCoroutine(Continue());
         IEnumerator Continue()
         {
@@ -156,18 +142,67 @@ public class Player : MonoBehaviour
         }
     }
 
+    // 流血
+    public void ContinueDamage(float damagePerSecond, float duration)
+    {
+        StartCoroutine(Continue());
+        IEnumerator Continue()
+        {
+            float timer = 0f;
+            while (timer < duration)
+            {
+                TakeDamage(damagePerSecond * Time.deltaTime);
+
+                yield return null;
+
+                timer += Time.deltaTime;
+            }
+        }
+    }
+
+    // debuff视野受限，参数为时长
+    public void LimitedView(float time)
+    {
+        StartCoroutine(AddLimited());
+        IEnumerator AddLimited()
+        {
+            // TODO：添加视野受限效果
+            yield return new WaitForSeconds(time);
+            // 清除受限UI
+        }
+    }
+
     // 死亡
     public void Die()
     {
         if (currentHealth <= 0)
         {
             Debug.Log("I am dead");
+            // TODO：弹出死亡界面
             Time.timeScale = 0;
         }
     }
 
+    // 天敌发现，直接死亡
     public void GoDie()
     {
         currentHealth = 0;
+    }
+
+    // 摔落伤害
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            float fallDistance = maxHeight - transform.position.y;
+            // 高于阈值
+            if(fallDistance > heightThreshold)
+            {
+                float damage = (fallDistance - heightThreshold) * fallDamageRatio;
+                TakeDamage(damage);
+                // 落地后将最高高度重置
+                maxHeight = transform.position.y;
+            }
+        }
     }
 }

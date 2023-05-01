@@ -6,11 +6,13 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     // 投射物初速度
-    public Vector3 velocity;
+    public Vector3 velocity = Vector3.zero;
     // 每秒伤害
     public float damagePerSecond = 3f;
     // 减速时间长度
     public float slowDuration = 5f;
+    // 减速比例
+    public float slowRatio = 0.5f;
     // 正向喷射
     public Vector3 launchDirection;
 
@@ -31,11 +33,18 @@ public class Bullet : MonoBehaviour
             transform.LookAt(target.transform.position);
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 2f);
 
-            // 持续伤害
-            BuffManager.Instance.AddBuff(1, () =>
+            // 视野受限
+            BuffManager.Instance.AddBuff(0, () =>
             {
-                target.gameObject.GetComponent<Player>().TakeDamage(damagePerSecond);
+                target.gameObject.GetComponent<Player>().LimitedView(0.5f);
             });
+            // 减速
+            BuffManager.Instance.AddBuff(2, () =>
+            {
+                target.gameObject.GetComponent<PlayerController>().Slow(1.5f, slowRatio);
+            });
+
+            Destroy(gameObject);
         }
     }
 
