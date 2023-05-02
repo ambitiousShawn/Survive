@@ -154,7 +154,7 @@ public class RangedAttack : MonoBehaviour
         isChargingShotEnabled = false;
         CheckLineRenderer(follower);
         // 做判断能否发射
-        fluidValue = bug.GetComponent<Player>().currentBodyFluid;
+        fluidValue = Player.currentBodyFluid;
         if (fluidValue >= fluidConsume)
         {
             // 记得角度和速度

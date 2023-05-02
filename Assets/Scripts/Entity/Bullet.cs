@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
             // 视野受限
             BuffManager.Instance.AddBuff(0, () =>
             {
-                target.gameObject.GetComponent<Player>().LimitedView(0.5f);
+                //target.gameObject.GetComponent<Player>().LimitedView(0.5f);
             });
             // 减速
             BuffManager.Instance.AddBuff(2, () =>

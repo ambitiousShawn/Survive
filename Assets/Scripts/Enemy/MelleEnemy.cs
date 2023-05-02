@@ -125,7 +125,7 @@ public class MelleEnemy : FSM
 
         BuffManager.Instance.AddBuff(0, () =>
         {
-            player.GetComponent<Player>().LimitedView(limitedTime);
+            //splayer.GetComponent<Player>().LimitedView(limitedTime);
         });
 
         BuffManager.Instance.AddBuff(2, () =>
