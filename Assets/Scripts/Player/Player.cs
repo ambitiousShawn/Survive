@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
             if(transform.position.y > maxHeight)
             {
                 maxHeight = transform.position.y;
-                Debug.Log(maxHeight);
+                //Debug.Log(maxHeight);
             }
         }
     }
@@ -179,6 +179,7 @@ public class Player : MonoBehaviour
     public void GoDie()
     {
         currentHealth = 0;
+        Die();
     }
 
     // À§¬‰…À∫¶

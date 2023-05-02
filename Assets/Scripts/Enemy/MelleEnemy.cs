@@ -130,7 +130,7 @@ public class MelleEnemy : FSM
 
         BuffManager.Instance.AddBuff(2, () =>
         {
-            player.GetComponent<PlayerController>().Slow(slowDuration, ratio);
+            //player.GetComponent<PlayerController>().Slow(slowDuration, ratio);
         });
 
         yield return new WaitForSeconds(duration);

@@ -14,7 +14,7 @@ public enum PlayerState
     Jump
 }
 
-public class PlayerController : MonoBehaviour
+public class PlayerController1 : MonoBehaviour
 {
     // 当前玩家状态
     private PlayerState currentState;
@@ -66,11 +66,11 @@ public class PlayerController : MonoBehaviour
         // 如果为玩家控制
         if (isMoving)
         {
-            if(Input.GetKey(KeyCode.Space) && isGrounded)
+            if (Input.GetKey(KeyCode.Space) && isGrounded)
             {
                 ChangeState(PlayerState.Jump);
             }
-            else if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
                 ChangeState(PlayerState.Move);
             }
@@ -208,7 +208,7 @@ public class PlayerController : MonoBehaviour
     // 改变状态
     void ChangeState(PlayerState newState)
     {
-        if(currentState == newState)
+        if (currentState == newState)
         {
             return;
         }

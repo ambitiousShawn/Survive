@@ -41,7 +41,7 @@ public class Bullet : MonoBehaviour
             // ¼õËÙ
             BuffManager.Instance.AddBuff(2, () =>
             {
-                target.gameObject.GetComponent<PlayerController>().Slow(1.5f, slowRatio);
+                //target.gameObject.GetComponent<PlayerController>().Slow(1.5f, slowRatio);
             });
 
             Destroy(gameObject);
