@@ -14,13 +14,12 @@ public enum PlayerState
     Jump
 }
 
-public class PlayerController : MonoBehaviour
+public class PlayerController1 : MonoBehaviour
 {
     // 当前玩家状态
-    PlayerState currentState;
+    private PlayerState currentState;
 
-    // 跳跃力度
-    public float jumpForce = 10f;
+    [Header("速度相关参数")]
     // 移动速度
     [SerializeField] private float speed = 5f;
     // TODO：跳跃需优化
@@ -35,7 +34,7 @@ public class PlayerController : MonoBehaviour
     private float horizontal;
 
     // 检测是否接触地面
-    public bool isGrounded;
+    [SerializeField] private bool isGrounded;
     // 角色控制，用于载具交互
     public bool isMoving = true;
     // 躲藏信息
@@ -44,7 +43,7 @@ public class PlayerController : MonoBehaviour
     // 相机轴
     [SerializeField] private Transform cameraPivot;
     // 刚体
-    [SerializeField] private Rigidbody rb;
+    private Rigidbody rb;
 
     private Animator animator;
     // 动画移动 TODO：优化
@@ -67,11 +66,11 @@ public class PlayerController : MonoBehaviour
         // 如果为玩家控制
         if (isMoving)
         {
-            if(Input.GetKey(KeyCode.Space) && isGrounded)
+            if (Input.GetKey(KeyCode.Space) && isGrounded)
             {
                 ChangeState(PlayerState.Jump);
             }
-            else if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
             {
                 ChangeState(PlayerState.Move);
             }
@@ -128,8 +127,8 @@ public class PlayerController : MonoBehaviour
     void Look()
     {
         // 根据相机正向运动
-        var relative = (cameraPivot.forward * vertical + cameraPivot.right * horizontal);
-        var rot = Quaternion.LookRotation(relative, Vector3.up);
+        Vector3 relative = (cameraPivot.forward * vertical + cameraPivot.right * horizontal);
+        Quaternion rot = Quaternion.LookRotation(relative, Vector3.up);
 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rot, turnSpeed * Time.deltaTime);
     }
@@ -138,8 +137,8 @@ public class PlayerController : MonoBehaviour
     {
         GatherInput();
         Look();
-        float input = new Vector3(vertical, 0, horizontal).magnitude;
-        rb.MovePosition(transform.position + (transform.forward * input) * speed * Time.deltaTime);
+        float direction = new Vector3(vertical, 0, horizontal).magnitude;
+        rb.MovePosition(transform.position + (transform.forward * direction) * speed * Time.deltaTime);
     }
 
     // 开始蓄力跳跃
@@ -209,7 +208,7 @@ public class PlayerController : MonoBehaviour
     // 改变状态
     void ChangeState(PlayerState newState)
     {
-        if(currentState == newState)
+        if (currentState == newState)
         {
             return;
         }

@@ -3,71 +3,91 @@ using System.Collections.Generic;
 using UnityEngine;
 using Shawn.ProjectFramework;
 
+[RequireComponent(typeof(Player))]
+[RequireComponent(typeof(PlayerController))]
+[RequireComponent (typeof(BoxCollider))]
 public class PlayerInteraction : MonoBehaviour
 {
-    UGUI_MainUIPanel panel;
+    private UGUI_MainUIPanel panel;
 
-    public GameObject player;
-    public GameObject vehicle;
-    [SerializeField] private float distance = 1.5f;
+    private GameObject player;
 
-    // 默认角色控制
-    private bool playerController = true;
-    private bool vehicleController = false;
+    [SerializeField]
+    [Header("风滚草")]
+    private GameObject vehicle;
+
+    [SerializeField]
+    [Header("与风滚草可交互距离")]
+    private float distance = 1.5f;
+
+    [SerializeField]
+    [Header("体液回复时间间隔")]
+    private float pickUpInterval = 1f;
+
+    [SerializeField]
+    [Header("是否为玩家控制")]
+    private bool isPlayerController = true; 
 
     // 每秒恢复
     private float lastUpdateTime;
 
+    private void Start()
+    {
+        player = gameObject;
+    }
+
     public void Update()
     {
-        if(vehicleController)
+        if (panel == null) 
+            panel = PanelManager.Instance.GetPanelByName("UGUI_MainUIPanel") as UGUI_MainUIPanel;
+        
+        //车辆驾驶模式
+        if (!isPlayerController)
         {
-            // 相机跟随
+            // 小虫跟随
             player.transform.position = vehicle.transform.position;
-            // 恢复
-            if (Time.time - lastUpdateTime > 1f)
+            // 恢复属性
+            if (Time.time - lastUpdateTime > pickUpInterval)
             {
                 player.GetComponent<Player>().PickUp();
                 lastUpdateTime = Time.time;
             }
-        }
-
-        Vector3 relative = player.transform.position - vehicle.transform.position;
-        if(relative.magnitude < distance)
-        {
-            panel?.ShowPickUp(vehicle.transform.position, "风滚草，按下E键进入内部，按下F键开启"); //显示交互
-            if (vehicleController)
+            //退出载具
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if(Input.GetKeyDown(KeyCode.Escape))
-                {
-                    // 退出载具
-                    playerController = true;
-                    ChangeController();
-                }
+                // 退出载具
+                isPlayerController = true;
+                ChangeController();
             }
-            else
+        }
+        //人物操控模式
+        else
+        {
+            Vector3 relative = player.transform.position - vehicle.transform.position;
+            if (relative.sqrMagnitude <= Mathf.Pow(distance, 2))
             {
+                panel?.ShowPickUp(vehicle.transform.position, "风滚草，按下E键进入内部，按下F键开启"); //显示交互
                 // 弹出按下F进入载具
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    playerController = false;
+                    isPlayerController = false;
                     ChangeController();
                 }
-                else if(Input.GetKeyDown(KeyCode.E))
+                else if (Input.GetKeyDown(KeyCode.E))
                 {
-                    // 加载内部
+                    // TODO:加载内部
                 }
             }
         }
     }
+    
 
     public void ChangeController()
     {
-        if (playerController)
+        if (isPlayerController)
         {
             // 转换为角色控制
-            vehicleController = false;
-            vehicle.GetComponent<VehicleController>().ChangeState(false);
+            //vehicle.GetComponent<VehicleController>().ChangeState(false);
             player.GetComponent<PlayerController>().isMoving = true;
             player.GetComponent<BoxCollider>().enabled = true;
             player.transform.position = vehicle.transform.position + Vector3.right * distance;
@@ -75,7 +95,6 @@ public class PlayerInteraction : MonoBehaviour
         else
         {
             // 确保摄像机跟随
-            vehicleController = true;
             vehicle.GetComponent<VehicleController>().ChangeState(true);
             player.GetComponent<PlayerController>().isMoving = false;
             player.GetComponent<BoxCollider>().enabled = false;
