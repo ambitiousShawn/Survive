@@ -65,8 +65,6 @@ public class CameraController : MonoBehaviour
         sphereCollider = gameObject.GetComponent<SphereCollider>();
         originFieldOfView = maxFieldOfView;
 
-        PanelManager.Instance.ShowPanel<UGUI_MainUIPanel>("UGUI_MainUIPanel");
-
         ReturnOrigin();
         // 光标初始化
         Cursor.lockState = CursorLockMode.Locked;

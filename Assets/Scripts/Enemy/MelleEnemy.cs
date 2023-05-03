@@ -32,7 +32,6 @@ public class MelleEnemy : FSM
     [SerializeField] private float ratio = 0.3f;
 
     [SerializeField] private float limitedTime = 0.5f;
-    [SerializeField] private float limitedRange = 3f;
 
     // ÊÇ·ñ¹¥»÷
     private bool canAttack = true;

@@ -25,7 +25,8 @@ namespace Shawn.ProjectFramework
             startBtn.onClick.AddListener(() =>
             {
                 //TODO:添加切换场景到游戏的接口逻辑
-                SceneManager.LoadScene(1);
+                PanelManager.Instance.HidePanel("UGUI_BeginPanel");
+                PanelManager.Instance.ShowPanel<LoadUI>("LoadUI");
             });
 
             loadBtn.onClick.AddListener(() =>

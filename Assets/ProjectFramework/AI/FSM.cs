@@ -130,7 +130,7 @@ namespace Shawn.ProjectFramework
 
         public void Exit()
         {
-            parameter.enemy.GetComponent<Animator>().SetTrigger("Idlebreak");
+            parameter.enemy.GetComponent<Animator>().SetTrigger("IdleBreak");
         }
 
         public void Stay()
