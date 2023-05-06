@@ -1,3 +1,4 @@
+using Shawn.ProjectFramework;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -54,6 +55,7 @@ public class PlayerController1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PanelManager.Instance.ShowPanel<UGUI_MainUIPanel>("UGUI_MainUIPanel");
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         originalSpeed = speed;

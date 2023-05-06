@@ -2,6 +2,7 @@ using Shawn.ProjectFramework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -49,8 +50,24 @@ public class LoadUI : BasePanel
                 if (Input.anyKeyDown)
                 {
                     operation.allowSceneActivation = true;
-                    PanelManager.Instance.HidePanel("LoadUI");
-                    PanelManager.Instance.ShowPanel<UGUI_MainUIPanel>("UGUI_MainUIPanel");
+
+                    // 直接删除所有panel
+
+                    //查找场景中所有的Canvas和EventSystem
+                    Canvas[] canvasList = FindObjectsOfType<Canvas>();
+                    EventSystem[] eventSystemList = FindObjectsOfType<EventSystem>();
+
+                    foreach (Canvas canvas in canvasList)
+                    {
+                        //删除场景中的Canvas
+                        Destroy(canvas.gameObject);
+                    }
+
+                    foreach (EventSystem eventSystem in eventSystemList)
+                    {
+                        //删除场景中的EventSystem
+                        Destroy(eventSystem.gameObject);
+                    }
                 }
             }
             yield return null;

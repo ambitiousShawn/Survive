@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    private EnemyUI enemyUI;      // 敌人 UI 组件
+
     // 最大生命值
     public float maxHealth = 100f;
     // 当前血量
@@ -36,6 +38,10 @@ public class Health : MonoBehaviour
         {
             currentHealth = 0;
         }
+        else
+        {
+            enemyUI.UpdateHealth(currentHealth);
+        }
     }
 
     // 使用体液攻击
@@ -67,5 +73,6 @@ public class Health : MonoBehaviour
     {
         Debug.Log("Enemy is dead");
         Destroy(gameObject);
+        Destroy(enemyUI.gameObject);
     }
 }
