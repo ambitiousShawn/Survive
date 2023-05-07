@@ -85,10 +85,10 @@ public class MeleeAttack : MonoBehaviour
         if(other.CompareTag("MeleeEnemy"))
         {
             // 伤害总大小，最大生命值的比例伤害
-            var damageAmount = damageRatio * other.GetComponent<Health>().maxHealth;
+            var damageAmount = damageRatio * other.GetComponent<Enemy>().maxHealth;
 
             // 敌人承受伤害
-            other.GetComponent<Health>().TakeDamage(damageAmount);
+            other.GetComponent<Enemy>().TakeDamage(damageAmount);
 
             // 敌人受击动画
             other.GetComponent<Animator>().SetTrigger("hit");
@@ -97,7 +97,7 @@ public class MeleeAttack : MonoBehaviour
             Vector3 direction = new Vector3(relative.x, 0f, relative.z);
 
             // 敌人击退效果
-            other.GetComponent<Enemy>().KnockBack(direction * knockBackForce, knockBackTime);
+            other.GetComponent<Enemy>().KnockBack(direction * knockBackForce);
 
             // 敌人特效
             //Instantiate(hitEffectPerfab, other.ClosestPoint(transform.position), Quaternion.identity);

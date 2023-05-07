@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.8509156, g: 0.8445881, b: 0.77704966, a: 1}
+  m_IndirectSpecularColor: {r: 0.8509155, g: 0.8445878, b: 0.7770493, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3618,10 +3618,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b86a27695d2a545b0b2ba3eb671612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 100
-  maxBodyFluid: 100
-  currentBodyFluid: 100
 --- !u!1001 &133860042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9863,7 +9859,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7739cc38348143a47b2e408c56405833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 3
   speed: 2
   flySpeed: 1
   originalSpeed: 0
@@ -9872,7 +9867,6 @@ MonoBehaviour:
   isMoving: 1
   isHide: 0
   cameraPivot: {fileID: 2044249588}
-  rb: {fileID: 0}
   anim: {fileID: 893956118}
   maxTime: 2
   timer: 0
@@ -9888,13 +9882,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66a278ee0a82ce743aa6f8c089a84044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraPivot: {fileID: 2044249587}
-  currentHealth: 0
-  currentBodyFluid: 0
+  maxHealth: 100
+  maxBodyFluid: 100
   pickUpPerSecond: 0.05
-  damagePerSecond: 1
   heightThreshold: 2
   fallDamageRatio: 2
+  maxHeight: 0
 --- !u!114 &376090230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9907,9 +9900,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e066fd7d15420469402593c4933796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 376090227}
   vehicle: {fileID: 1821814710}
   distance: 1.5
+  pickUpInterval: 1
+  isPlayerController: 1
 --- !u!54 &376090233
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9939,6 +9933,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.09810611, y: 0.0821011, z: 0.10658418}
   m_Center: {x: 0.0026333332, y: 0.04163722, z: -0.015241241}
+--- !u!114 &376090235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376090227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e9fe9dfc8432f47bb1b77a3444dc57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: {fileID: 0}
+  followTarget: {fileID: 0}
+  isGrounded: 0
+  isMoving: 1
+  isHide: 0
+--- !u!114 &376090236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376090227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ede6cc302381084a8c147783bb7837e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
 --- !u!1001 &378557642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50257,22 +50281,6 @@ MonoBehaviour:
   attackDuration: 2
   projectileSpeed: 4
   peakHeight: 0.5
---- !u!114 &2063155101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2063155099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76b86a27695d2a545b0b2ba3eb671612, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  currentHealth: 0
-  maxBodyFluid: 100
-  currentBodyFluid: 0
 --- !u!114 &2063155102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50285,6 +50293,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9be1a1780d89b458437a029324b5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyName: Ranged
+  enemyUIPrefab: {fileID: 8259672664672920963, guid: b6fe99d6a6bfa704ea63fa25cc4f5080, type: 3}
+  enemyUI: {fileID: 0}
+  maxHealth: 100
+  currentHealth: 0
+  maxBodyFluid: 100
+  currentBodyFluid: 0
 --- !u!4 &2063155105 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400008, guid: e2f07c5daaa14c44d843e8ba6682df4b, type: 3}

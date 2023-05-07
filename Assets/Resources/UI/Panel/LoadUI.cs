@@ -53,7 +53,7 @@ public class LoadUI : BasePanel
 
                     // 直接删除所有panel
 
-                    //查找场景中所有的Canvas和EventSystem
+                    // 查找场景中所有的Canvas和EventSystem
                     Canvas[] canvasList = FindObjectsOfType<Canvas>();
                     EventSystem[] eventSystemList = FindObjectsOfType<EventSystem>();
 

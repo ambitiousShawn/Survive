@@ -87,61 +87,57 @@ public class Movement : MonoBehaviour
 
     private void UseRangedAttack()
     {
-        // 如果有体液值，进行attack2
-        if (spider.GetComponent<Health>().currentBodyFluid >= usage)
+        Vector3 playerPos = player.transform.position;
+        Vector3 enemyPos = launchPoint.position;
+
+        Vector3 enemyToPlayer = playerPos - enemyPos;
+        // 水平相对
+        relative = new Vector3(enemyToPlayer.x, 0, enemyToPlayer.z);
+        float horizontalDistance = relative.magnitude;
+
+        if (enemyToPlayer.magnitude < maxAttackRange)
         {
-            Vector3 playerPos = player.transform.position;
-            Vector3 enemyPos = launchPoint.position;
-
-            Vector3 enemyToPlayer = playerPos - enemyPos;
-            // 水平相对
-            relative = new Vector3(enemyToPlayer.x, 0, enemyToPlayer.z);
-            float horizontalDistance = relative.magnitude;
-
-            if (enemyToPlayer.magnitude < maxAttackRange)
+            // 根据水平求解总时间
+            flightDuration = horizontalDistance / projectileSpeed;
+            float delta = Mathf.Pow(flightDuration, 2) * (peakHeight + Mathf.Abs(enemyToPlayer.y)) / peakHeight;
+            // 这里主要是避免出错
+            if (delta >= 0)
             {
-                // 根据水平求解总时间
-                flightDuration = horizontalDistance / projectileSpeed;
-                float delta = Mathf.Pow(flightDuration, 2) * (peakHeight + Mathf.Abs(enemyToPlayer.y)) / peakHeight;
-                // 这里主要是避免出错
-                if (delta >= 0)
+                // 求解第一段时间
+                float timeToPeak = (Mathf.Sqrt(delta) - flightDuration) * peakHeight / Mathf.Abs(enemyToPlayer.y);
+
+                Debug.DrawLine(enemyPos, enemyPos + relative.normalized * timeToPeak * horizontalSpeed);
+                // 得到竖直方向初速度
+                verticalSpeed = timeToPeak * -Physics.gravity.y;
+                horizontalSpeed = projectileSpeed;
+
+                float peakDistance = horizontalSpeed * timeToPeak;
+
+                Vector3 peakPoint = enemyPos + relative.normalized * peakDistance + Vector3.up * peakHeight;
+
+                Debug.DrawLine(enemyPos, peakPoint, Color.green);
+                Debug.DrawLine(peakPoint, playerPos, Color.yellow);
+
+                for (float t = 0f; t < attackDuration; t += 0.1f)
                 {
-                    // 求解第一段时间
-                    float timeToPeak = (Mathf.Sqrt(delta) - flightDuration) * peakHeight / Mathf.Abs(enemyToPlayer.y);
-
-                    Debug.DrawLine(enemyPos, enemyPos + relative.normalized * timeToPeak * horizontalSpeed);
-                    // 得到竖直方向初速度
-                    verticalSpeed = timeToPeak * -Physics.gravity.y;
-                    horizontalSpeed = projectileSpeed;
-
-                    float peakDistance = horizontalSpeed * timeToPeak;
-
-                    Vector3 peakPoint = enemyPos + relative.normalized * peakDistance + Vector3.up * peakHeight;
-
-                    Debug.DrawLine(enemyPos, peakPoint, Color.green);
-                    Debug.DrawLine(peakPoint, playerPos, Color.yellow);
-
-                    for (float t = 0f; t < attackDuration; t += 0.1f)
-                    {
-                        Vector3 p = CalculateProjectilePosition(enemyPos, t);
-                        Debug.DrawLine(p, p + Vector3.up, Color.red);
-                    }
-
-                    launchDirection = relative.normalized * horizontalSpeed + Vector3.up * verticalSpeed;
-                    Debug.DrawLine(enemyPos, enemyPos + launchDirection, Color.green);
+                    Vector3 p = CalculateProjectilePosition(enemyPos, t);
+                    Debug.DrawLine(p, p + Vector3.up, Color.red);
                 }
+
+                launchDirection = relative.normalized * horizontalSpeed + Vector3.up * verticalSpeed;
+                Debug.DrawLine(enemyPos, enemyPos + launchDirection, Color.green);
             }
-            // 发射预制体
-            if (canAttack)
-            {
-                canAttack = false;
-                StartCoroutine(RangedAttack());
-            }
+        }
+        // 发射预制体
+        if (canAttack)
+        {
+            canAttack = false;
+            StartCoroutine(RangedAttack());
         }
     }
     IEnumerator RangedAttack()
     {
-        spider.GetComponent<Health>().UseAttack(usage);
+        spider.GetComponent<Enemy>().UseAttack(usage);
         // 碰撞后伤害在预制体代码中实现
         var animator = GetComponent<Animator>();
         animator.SetTrigger("attack2");

@@ -27,12 +27,6 @@ public class MelleEnemy : FSM
     // ¹¥»÷¼ä¸ô
     [SerializeField] private float duration = 5f;
 
-    [SerializeField] private float slowDuration = 2f;
-
-    [SerializeField] private float ratio = 0.3f;
-
-    [SerializeField] private float limitedTime = 0.5f;
-
     // ÊÇ·ñ¹¥»÷
     private bool canAttack = true;
     // Ñ²º½

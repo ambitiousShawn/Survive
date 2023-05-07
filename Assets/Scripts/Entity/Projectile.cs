@@ -47,7 +47,7 @@ public class Projectile : MonoBehaviour
 
             // TODO£ºÎ¯ÍÐdebuff
             //attack.doEffect();
-            target.gameObject.GetComponent<Health>().TakeDamage(damageRatio * target.GetComponent<Health>().maxHealth);
+            target.gameObject.GetComponent<Enemy>().TakeDamage(damageRatio * target.GetComponent<Enemy>().maxHealth);
             Destroy(gameObject);
         }
         // »ú¹Ø1
