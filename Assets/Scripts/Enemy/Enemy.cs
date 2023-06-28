@@ -7,6 +7,9 @@ public class Enemy : MonoBehaviour
 {
     private Rigidbody rb;
 
+    public float offset;
+    public float scale;
+
     public string enemyName;      // 敌人名称
     public GameObject enemyUIPrefab; // 敌人 UI 预制体
     public EnemyUI enemyUI;
@@ -26,9 +29,12 @@ public class Enemy : MonoBehaviour
         // 创建 Canvas 游戏对象
         GameObject canvasObject = Instantiate(enemyUIPrefab.gameObject, transform);
         // 获取敌人游戏对象下的 Canvas 组件
-        enemyCanvas = canvasObject.GetComponent<Canvas>();
+        enemyCanvas = transform.GetComponentInChildren<Canvas>();
 
-        enemyUI = canvasObject.GetComponent<EnemyUI>();
+        Vector3 size =  enemyCanvas.GetComponent<RectTransform>().localScale;
+        size = size * scale;
+
+        enemyUI = transform.GetComponentInChildren<EnemyUI>();
 
         enemyUI.InitialUI(enemyName, maxHealth, maxBodyFluid);
         // 初始化当前血量为最大血量
@@ -56,15 +62,10 @@ public class Enemy : MonoBehaviour
         if (IsInCameraView())
         {
             // 计算 UI 元素的位置
-            Vector3 pos = transform.position + transform.up;
-            Vector3 screenPos = Camera.main.WorldToScreenPoint(pos);
+            Vector3 pos = transform.position + transform.up * offset;
 
             // 将 UI 元素的位置进行屏幕坐标转换，并更新其位置属性
-            enemyCanvas.transform.position = screenPos;
-
-            // 实例化 UI 元素并设置其位置
-            RectTransform rectTransform = enemyCanvas.GetComponent<RectTransform>();
-            rectTransform.position = screenPos;
+            enemyCanvas.transform.position = pos;
         }
     }
 
@@ -122,7 +123,7 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log("Enemy is dead");
         Destroy(gameObject);
-        Destroy(enemyUI.gameObject);
+        Destroy(enemyCanvas.gameObject);
     }
 
     // 击退
@@ -136,5 +137,13 @@ public class Enemy : MonoBehaviour
         // 判断敌人是否在主相机视野中
         Vector3 screenPos = Camera.main.WorldToViewportPoint(transform.position);
         return screenPos.z > 0 && screenPos.x > 0 && screenPos.x < 1 && screenPos.y > 0 && screenPos.y < 1;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("DeathZone"))
+        {
+            Die();
+        }
     }
 }

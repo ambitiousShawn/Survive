@@ -25,11 +25,13 @@ public class Bullet : MonoBehaviour
         rb.velocity = velocity;
     }
 
-    void FixedUpdate()
+    // 攻击玩家
+    void OnTriggerEnter(Collider other)
     {
-        // 同样造成减速效果
-        if (target != null)
+        if (other.tag == "Player")
         {
+            target = other;
+
             transform.LookAt(target.transform.position);
             transform.position = Vector3.MoveTowards(transform.position, target.transform.position, 2f);
 
@@ -45,15 +47,6 @@ public class Bullet : MonoBehaviour
             });
 
             Destroy(gameObject);
-        }
-    }
-
-    // 攻击玩家
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            target = other;
         }
     }
 

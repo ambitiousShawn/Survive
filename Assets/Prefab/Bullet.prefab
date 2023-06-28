@@ -114,6 +114,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   damagePerSecond: 3
   slowDuration: 5
+  slowRatio: 0.5
   launchDirection: {x: 0, y: 0, z: 0}
 --- !u!54 &7208906093512080570
 Rigidbody:

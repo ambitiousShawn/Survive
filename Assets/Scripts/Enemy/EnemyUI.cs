@@ -8,6 +8,11 @@ public class EnemyUI : MonoBehaviour
     public Slider healthSlider; // 血条
     public Slider bodyFluidSlider;  // 体液条
 
+    private void Update()
+    {
+        transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
+    }
+
     // 设置敌人的名称和初始血量
     public void InitialUI(string name, float maxHealth, float maxBodyFluid)
     {

@@ -3606,7 +3606,7 @@ MonoBehaviour:
     duration: 5
     relative: {x: 0, y: 0, z: 0}
     count: 0
---- !u!114 &131426807
+--- !u!114 &131426811
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3615,9 +3615,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 131426796}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76b86a27695d2a545b0b2ba3eb671612, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d9be1a1780d89b458437a029324b5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0
+  scale: 0
+  enemyName: Rat
+  enemyUIPrefab: {fileID: 8259672664672920963, guid: b6fe99d6a6bfa704ea63fa25cc4f5080, type: 3}
+  enemyUI: {fileID: 0}
+  maxHealth: 100
+  currentHealth: 0
+  maxBodyFluid: 100
+  currentBodyFluid: 0
 --- !u!1001 &133860042
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9635,19 +9644,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400040, guid: cb1318314a04124458bfda29885ad2fd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.3158262
+      value: 0.31582618
       objectReference: {fileID: 0}
     - target: {fileID: 400040, guid: cb1318314a04124458bfda29885ad2fd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6187441
+      value: -0.618744
       objectReference: {fileID: 0}
     - target: {fileID: 400040, guid: cb1318314a04124458bfda29885ad2fd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.32702136
+      value: -0.32702133
       objectReference: {fileID: 0}
     - target: {fileID: 400040, guid: cb1318314a04124458bfda29885ad2fd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.6406768
+      value: 0.64067674
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: cb1318314a04124458bfda29885ad2fd, type: 3}
       propertyPath: m_Controller
@@ -50293,6 +50302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d9be1a1780d89b458437a029324b5ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0.5
+  scale: 0.001
   enemyName: Ranged
   enemyUIPrefab: {fileID: 8259672664672920963, guid: b6fe99d6a6bfa704ea63fa25cc4f5080, type: 3}
   enemyUI: {fileID: 0}

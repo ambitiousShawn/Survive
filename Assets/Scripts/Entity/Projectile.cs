@@ -54,11 +54,13 @@ public class Projectile : MonoBehaviour
         else if(ID == SkillState.second && other.tag == "Organ1")
         {
             Destroy(other.gameObject);
+            Destroy(gameObject);
         }
         // ป๚นุ2
         else if(ID == SkillState.third && other.tag == "Organ2")
         {
             Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }
